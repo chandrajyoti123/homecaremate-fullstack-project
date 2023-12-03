@@ -12,7 +12,7 @@ import SignUp from './view/SingUp/SignUp';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 const router=createBrowserRouter([
     {
-        path:'/',
+        path:'/home',
         element:<Home/>
     },
     {
@@ -40,7 +40,7 @@ const router=createBrowserRouter([
         element:<Login/>
     },
     {
-        path:'/singup',
+        path:'/',
         element:<SignUp/>
     },
    

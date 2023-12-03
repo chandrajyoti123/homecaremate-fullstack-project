@@ -2,11 +2,13 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
-import User from "./models/User.js";
+import { postapilogin, postapiuser } from "./controllers/User.js";
+import path from "path"
 
 
 const app=express()
  app.use(express.json())
+   const __dirname = path.resolve();
 
 
  // ---mongodb connected ----
@@ -26,57 +28,19 @@ connectMongodb()
 
 // --------- api -----------
 
-app.post('/api/users',async(req,res)=>{
+app.post('/api/users',postapiuser)
 
-    const { first_name , last_name , email , phone_no , address , password }=req.body
-    const newuser=new User({ first_name, last_name,email,phone_no,address,password})
-     try{
-        const saveduser=await newuser.save()
-     return res.json({
-        success:true, 
-        data:saveduser,
-        message:"user saved successfully"
-    })
-    }
-   catch(error){
-    return res.json({
-        success:false,
-        message:error.message
-    })
+app.post("/api/login", postapilogin)
 
-    }
+// ------api end------------
 
-})
+  if (process.env.NODE_ENV === "production") {
+    app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 
-app.post("/api/login",async(req,res)=>{
-    const {email, password}=req.body
-     if(!email &&  !password){
-       return res.json({
-            success:false,
-            message:"please enter email and password"
-        })
-    }
-  
-     const logineduser= await User.findOne({email:email, password:password})
-
-     if(!logineduser){
-       return res.json({
-            success:false,
-            message:"Invalid credential"
-        })
-     }
-
-    return res.json({
-        success:true,
-        data:logineduser,
-        message:"user login successfully"
-
+     app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'))
      })
-      
-
-
-
-})
+  }
 
 
 // --------server is listning-----------

@@ -48,6 +48,36 @@ app.post('/api/users',async(req,res)=>{
 
 })
 
+app.post("/api/login",async(req,res)=>{
+    const {email, password}=req.body
+     if(!email &&  !password){
+       return res.json({
+            success:false,
+            message:"please enter email and password"
+        })
+    }
+  
+     const logineduser= await User.findOne({email:email, password:password})
+
+     if(!logineduser){
+       return res.json({
+            success:false,
+            message:"Invalid credential"
+        })
+     }
+
+    return res.json({
+        success:true,
+        data:logineduser,
+        message:"user login successfully"
+
+     })
+      
+
+
+
+})
+
 
 // --------server is listning-----------
 const PORT=process.env.PORT || 5000

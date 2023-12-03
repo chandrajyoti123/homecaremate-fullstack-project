@@ -1,83 +1,137 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SignUp.css';
 import { Link } from 'react-router-dom';
 import signupimg from './../../images/Mobile-login.svg'
+import axios from 'axios';
 export default function SignUp() {
+
+  const [firstname, setFirstname] = useState('')
+  const [lastname, setLastname] = useState('')
+  const [email, setEmail] = useState('')
+  const [password1, setPassword1] = useState('')
+  const [password2, setPassword2] = useState('')
+  // const [address, setAddress] = useState('')
+  const [phoneno, setPhoneno] = useState('')
+
+  const singupfun = async () => {
+    if (!firstname) {
+      alert('enter first name')
+      return
+    }
+    if (!lastname) {
+      alert('enter lastname name')
+      return
+    }
+    if (!email) {
+      alert('enter first email')
+      return
+    }
+    if (!phoneno) {
+      alert('enter first name')
+      return
+    }
+    
+
+    
+
+    const response = await axios.post('/api/users', {
+      first_name: firstname,
+      last_name: lastname,
+      email: email,
+      phone_no: phoneno,
+   
+      password: password1
+
+    })
+
+    if (response?.data?.data) {
+      window.location.href = '/'
+
+    } else {
+      alert(response?.data?.message)
+    }
+
+
+  }
+
   return (
     <>
-    
-    <div className='signup-container-main'>
-        <div>
-          <img className='signup-img' src={signupimg} />
-           </div>
 
-        <div className='signup-container'>
-        <h2 className='text-center'>SignUp</h2>
-         
-        <input type='text'
-         className='input-box'
-          placeholder='Enter your First  Name' 
-         
-          />
+      <div className='signup-container'>
 
-<input type='text'
-         className='input-box'
-          placeholder='Enter your Last  Name' 
-         
-          />
+        <div className='singup-child1'>
 
-        <input type='email'
-         className='input-box' 
-         placeholder='Enter your Email' 
-         
-         />
-
-        <input type='text'
-         className='input-box'
-          placeholder='Enter your Mo. Number'
-         
-          
-          />
-
-<input type='text'
-         className='input-box'
-          placeholder='Enter your Address'
-         
-          
-          />
-
-
-        <input type='password'
-         className='input-box' 
-         placeholder='Enter your Password' 
-         
-        
-         />
-
-        <div className='ml-2'>
-
-          <input  type='radio'
-           name='radio'
-           
-          
-         
-           />Male
-
-
-        <input type='radio'
-         name='radio'
-         
-         />Female
         </div>
+        <div className='singup-child2'>
+        <div className='login-singup-option'>
+          <div className='text '>
+            already have an account?
+          </div>
+          <Link to={'/login'}><button className='sign-btn'>login</button></Link>
+        </div>
+        <div className=' login-heading'>Welcome to Home Care Made</div>
+      <div className='text margin-bottom'>create a new account</div>
+          <div className='main-input-container'>
+            <div className='input-group'>
+              <label htmlFor='fistname ' className='input-label'>First Name</label>
+              <input type='text' placeholder='Ex., Tara' id='fistname' className='input-field singup-inpute'
+                value={firstname} onChange={(e) => {
+                  setFirstname(e.target.value)
+                }} />
+            </div>
+            <div className='input-group'>
+              <label htmlFor='lastname' className='input-label'>Last Name</label>
+              <input type='text' placeholder='Ex., Sahu' id='lastname' className='input-field singup-inpute' value={lastname} onChange={(e) => {
+                setLastname(e.target.value)
+              }} />
+            </div>
 
-       <p> <Link to={"/Login"} className='link-form'>Already an Account? </Link></p>
+          </div>
+          <div className='main-input-container'>
+            <div className='input-group'>
+              <label htmlFor='email ' className='input-label'>Email</label>
+              <input type='email' placeholder='Example@gmail.com' id='email' className='input-field singup-inpute'
+                value={email} onChange={(e) => {
+                  setEmail(e.target.value)
+                }} />
+            </div>
+            <div className='input-group'>
+              <label htmlFor='phoneno' className='input-label'>Phone No</label>
+              <input type='phone' placeholder='+91' id='phoneno' className='input-field singup-inpute' value={phoneno} onChange={(e) => {
+                setPhoneno(e.target.value)
+              }} />
+            </div>
 
-        <button  className='btn-register'>REGISTER</button>
-      </div>
+          </div>
+
+          
+          <div className='main-input-container'>
+            <div className='input-group'>
+              <label htmlFor='password1 ' className='input-label'>Create Password</label>
+              <input type='password' placeholder='at least 8 character' id='password1' className='input-field singup-inpute'
+                value={password1} onChange={(e) => {
+                  setPassword1(e.target.value)
+                }} />
+            </div>
+            <div className='input-group'>
+              <label htmlFor='password2' className='input-label'>Confirm Password</label>
+              <input type='password' placeholder='Confirm' id='password2' className='input-field singup-inpute' value={password2} onChange={(e) => {
+                setPassword2(e.target.value)
+              }} />
+            </div>
+
+          </div>
+
+          <button className='btn' onClick={singupfun}>Creat Account</button>
+        
+
+
+        </div>
+       
 
       </div>
     </>
 
-    
+
   )
 }

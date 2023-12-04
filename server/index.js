@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
 import { postapilogin, postapiuser } from "./controllers/User.js";
-import { postApiJob } from "./controllers/Job.js";
+import { postApiJob, getApiJob } from "./controllers/Job.js";
 import path from "path"
 
 
@@ -34,6 +34,8 @@ app.post('/api/users',postapiuser)
 app.post("/api/login", postapilogin)
 
 app.post("/api/job", postApiJob);
+
+app.get("/api/job/", getApiJob);
 
 
 

@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
 import { postapilogin, postapiuser } from "./controllers/User.js";
+import { postApiJob } from "./controllers/Job.js";
 import path from "path"
 
 
@@ -21,7 +22,7 @@ const connectMongodb = async () => {
         console.log("mongodb  added successfully")
     }
 }   
-connectMongodb()
+// connectMongodb()
 
 
  
@@ -31,6 +32,8 @@ connectMongodb()
 app.post('/api/users',postapiuser)
 
 app.post("/api/login", postapilogin)
+
+app.post("/api/job", postApiJob);
 
 
 
@@ -49,5 +52,5 @@ app.post("/api/login", postapilogin)
 const PORT=process.env.PORT || 5000
 app.listen(PORT,()=>{
     console.log(`server is running in port ${PORT}`)
- 
+    connectMongodb()
 })

@@ -8,6 +8,8 @@ import JobHere from './view/JobHere/JobHere';
 import AboutUs from './view/AboutUs/AboutUs';
 import Login from './view/Login/Login';
 import SignUp from './view/SingUp/SignUp';
+import Uploading from './view/admin/Uploading';
+
 
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 const router=createBrowserRouter([
@@ -42,6 +44,10 @@ const router=createBrowserRouter([
     {
         path:'/singup',
         element:<SignUp/>
+    },
+    {
+        path:'/upload',
+        element:<Uploading/>
     },
    
 ])

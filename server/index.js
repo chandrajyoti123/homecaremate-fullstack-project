@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
 import { postapilogin, postapiuser } from "./controllers/User.js";
+import { postapiservices, getapiservices,getapioneservices } from "./controllers/Services.js";
 import path from "path"
 
 
@@ -26,13 +27,18 @@ connectMongodb()
 
  
 
-// --------- api -----------
+// --------- api for user -----------
 
 app.post('/api/users',postapiuser)
 
 app.post("/api/login", postapilogin)
 
-// ------api end------------
+
+// ------api for services------------
+
+app.post('/api/services' , postapiservices);
+app.get('/api/services', getapiservices)
+app.get("/api/services/:_id",getapioneservices)
 
   if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, '..', 'client', 'build')));

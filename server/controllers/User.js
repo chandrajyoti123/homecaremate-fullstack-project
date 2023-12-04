@@ -47,4 +47,5 @@ const postapilogin=async(req,res)=>{
 
 
 }
+
 export {postapiuser, postapilogin};

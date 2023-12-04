@@ -43,7 +43,7 @@ const router=createBrowserRouter([
         path:'/singup',
         element:<SignUp/>
     },
-   
+ 
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -12,7 +12,7 @@ import SignUp from './view/SingUp/SignUp';
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 const router=createBrowserRouter([
     {
-        path:'/',
+        path:'/home',
         element:<Home/>
     },
     {
@@ -36,14 +36,14 @@ const router=createBrowserRouter([
         element:<AboutUs/>
     },
     {
-        path:'/login',
+        path:'/',
         element:<Login/>
     },
     {
         path:'/singup',
         element:<SignUp/>
     },
-   
+    // singup
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

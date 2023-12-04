@@ -45,11 +45,15 @@ export default function SignUp() {
     })
 
     if (response?.data?.data) {
+    
+      localStorage.setItem("signupuser",JSON.stringify(response.data.data))
       window.location.href = '/'
 
     } else {
       alert(response?.data?.message)
     }
+
+   
 
 
   }

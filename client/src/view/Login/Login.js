@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from "axios"
 import './Login.css'
 import { Link } from 'react-router-dom'
+import Navbar from '../../components/Navbar/Navbar'
 export default function Login() {
   const [email,setEmail]=useState("")
   const [password,setPassword]=useState("")
@@ -15,6 +16,7 @@ export default function Login() {
     // }
     const response=await axios.post('/api/login',{email:email, password:password})
     if(response?.data?.data){
+      localStorage.setItem("loginuser",JSON.stringify(response.data.data))
       window.location.href='/'
     }
     else{
@@ -25,7 +27,11 @@ export default function Login() {
 
 
 
+
+
   return (
+    <>
+    <Navbar/>
     <div className='login-container'>
       <div className='login-child1'>
 
@@ -60,5 +66,6 @@ export default function Login() {
 
     
     </div>
+    </>
   )
 }

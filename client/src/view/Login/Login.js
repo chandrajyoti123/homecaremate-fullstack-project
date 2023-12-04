@@ -14,7 +14,9 @@ export default function Login() {
     //   alert('email is required')
     // }
     const response=await axios.post('/api/login',{email:email, password:password})
-    if(response?.data?.data){
+
+    if(response?.data?.success){
+      localStorage.setItem('homecarementUser', JSON.stringify(response?.data?.data));
       window.location.href='/'
     }
     else{

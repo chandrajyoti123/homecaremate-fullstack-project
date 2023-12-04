@@ -37,6 +37,8 @@ app.post("/api/job", postApiJob);
 
 app.get("/api/job/", getApiJob);
 
+app.get("/api/job/:id", getApiJob);
+
 
 
 // ------api end------------

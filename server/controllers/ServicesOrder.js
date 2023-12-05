@@ -1,5 +1,5 @@
 import Order from "../models/ServicesOrder.js";
-const apipostorder = async (req, res) => {
+const postapiorder = async (req, res) => {
     const { shift, country, state, city, pincode, userid , serviceid, charges } = req.body
 
     const order = new Order({
@@ -22,17 +22,19 @@ const apipostorder = async (req, res) => {
     }
 }
 
-export {apipostorder};
 
-// const apigetorder=async( req,res)=>{
-//     const allorder=await Order.find()
-//     return res.json({
-//         success:true,
-//         data:allorder,
-//         message:"order fetched successfully"
-//     })
 
-// }
+const getapiorder=async( req,res)=>{
+    const allorder=await Order.find()
+    return res.json({
+        success:true,
+        data:allorder,
+        message:"order fetched successfully"
+    })
+
+}
+
+export {postapiorder,getapiorder};
 
 
 

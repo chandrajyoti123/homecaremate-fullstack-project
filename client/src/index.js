@@ -10,6 +10,7 @@ import Login from './view/Login/Login';
 import SignUp from './view/SingUp/SignUp';
 import Uploading from './view/admin/Uploading';
 import PlacedService from './view/PlacedServices/PlacedService';
+import YourServices from './view/YourServices/YourServices';
 
 
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
@@ -53,6 +54,10 @@ const router=createBrowserRouter([
     {
         path:'/palcedservice/:_id',
         element:<PlacedService/>
+    },
+    {
+        path:'/yourservices',
+        element:<YourServices/>
     },
    
 ])

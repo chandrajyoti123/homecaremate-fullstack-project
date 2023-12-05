@@ -4,9 +4,11 @@ import dotenv from "dotenv";
 dotenv.config();
 import { postapilogin, postapiuser } from "./controllers/User.js";
 import { postapiservices, getapiservices,getapioneservices } from "./controllers/Services.js";
-import { apipostorder } from "./controllers/ServicesOrder.js";
+import { postapiorder,getapiorder } from "./controllers/ServicesOrder.js";
+import { postApiJob,getApiJob , getApiUserJob, deleteApiJobById } from "./controllers/Job.js";
+
 import path from "path"
-import Order from "./models/ServicesOrder.js";
+
 
 
 const app=express()
@@ -53,7 +55,8 @@ app.delete("/api/job/:id", deleteApiJobById);
 // ----------------api for service Order----------
 
 
-app.post('/api/sericeorders',apipostorder)
+app.post('/api/serviceorders',postapiorder)
+app.get('/api/serviceorders',getapiorder)
 
     if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, '..', 'client', 'build')));

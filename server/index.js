@@ -8,7 +8,7 @@ import path from "path"
 
 
 const app=express()
- app.use(express.json())
+   app.use(express.json())
    const __dirname = path.resolve();
 
 
@@ -36,11 +36,11 @@ app.post("/api/login", postapilogin)
 
 // ------api for services------------
 
-app.post('/api/services' , postapiservices);
+   app.post('/api/services' , postapiservices);
 app.get('/api/services', getapiservices)
 app.get("/api/services/:_id",getapioneservices)
 
-  if (process.env.NODE_ENV === "production") {
+    if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 
      app.get('*', (req, res) => {

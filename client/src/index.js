@@ -9,6 +9,7 @@ import AboutUs from './view/AboutUs/AboutUs';
 import Login from './view/Login/Login';
 import SignUp from './view/SingUp/SignUp';
 import Uploading from './view/admin/Uploading';
+import PlacedService from './view/PlacedServices/PlacedService';
 
 
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
@@ -48,6 +49,10 @@ const router=createBrowserRouter([
     {
         path:'/upload',
         element:<Uploading/>
+    },
+    {
+        path:'/palcedservice/:_id',
+        element:<PlacedService/>
     },
    
 ])

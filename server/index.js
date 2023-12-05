@@ -4,14 +4,15 @@ import dotenv from "dotenv";
 dotenv.config();
 import { postapilogin, postapiuser } from "./controllers/User.js";
 import { postapiservices, getapiservices,getapioneservices } from "./controllers/Services.js";
-import { postApiJob, getApiJob, getApiUserJob, deleteApiJobById } from "./controllers/Job.js";
+import { apipostorder } from "./controllers/ServicesOrder.js";
 import path from "path"
+import Order from "./models/ServicesOrder.js";
 
 
 const app=express()
    app.use(express.json())
-   const __dirname = path.resolve();
-
+    const __dirname = path.resolve();
+ 
 
  // ---mongodb connected ----
 
@@ -41,6 +42,7 @@ app.post("/api/login", postapilogin)
 app.get('/api/services', getapiservices)
 app.get("/api/services/:_id",getapioneservices)
 
+
 // ------api for job------------
 
 app.post("/api/job", postApiJob);
@@ -48,12 +50,12 @@ app.get("/api/job/", getApiJob);
 app.get("/api/job/user/:id", getApiUserJob);
 app.delete("/api/job/:id", deleteApiJobById);
 
+// ----------------api for service Order----------
 
 
-  if (process.env.NODE_ENV === "production") {
+app.post('/api/sericeorders',apipostorder)
 
     if (process.env.NODE_ENV === "production") {
-
     app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 
      app.get('*', (req, res) => {

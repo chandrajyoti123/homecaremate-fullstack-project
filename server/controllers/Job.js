@@ -56,6 +56,22 @@ const getApiUserJob = async (req, res) => {
    }
   }
 
+const deleteApiJobById = async (req, res) => {
+    const { id } = req.params;
+  
+    try {
+      await Job.deleteOne({ _id: id });
+      res.status(200).json({
+        success: true,
+        message: " deleted successfully",
+      });
+    } catch (err) {
+      res.status(500).json({
+        success: false,
+        message: err.message,
+      });
+    }
+  };
 
 
 export {postApiJob, getApiJob, getApiUserJob, deleteApiJobById, }

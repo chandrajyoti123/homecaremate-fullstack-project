@@ -46,6 +46,7 @@ app.get("/api/services/:_id",getapioneservices)
 app.post("/api/job", postApiJob);
 app.get("/api/job/", getApiJob);
 app.get("/api/job/:id", getApiUserJob);
+app.delete("/api/job/:id", deleteApiJobById);
 
 
 

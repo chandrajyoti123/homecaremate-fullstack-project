@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 import { postapilogin, postapiuser } from "./controllers/User.js";
 import { postapiservices, getapiservices,getapioneservices } from "./controllers/Services.js";
+import { postApiJob, getApiJob, getApiUserJob, deleteApiJobById } from "./controllers/Job.js";
 import path from "path"
 
 
@@ -40,7 +41,19 @@ app.post("/api/login", postapilogin)
 app.get('/api/services', getapiservices)
 app.get("/api/services/:_id",getapioneservices)
 
+// ------api for job------------
+
+app.post("/api/job", postApiJob);
+app.get("/api/job/", getApiJob);
+app.get("/api/job/:id", getApiUserJob);
+app.delete("/api/job/:id", deleteApiJobById);
+
+
+
+  if (process.env.NODE_ENV === "production") {
+
     if (process.env.NODE_ENV === "production") {
+
     app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 
      app.get('*', (req, res) => {

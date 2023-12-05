@@ -42,7 +42,16 @@ app.post("/api/login", postapilogin)
 app.get('/api/services', getapiservices)
 app.get("/api/services/:_id",getapioneservices)
 
+
+// ------api for job------------
+
+app.post("/api/job", postApiJob);
+app.get("/api/job/", getApiJob);
+app.get("/api/job/user/:id", getApiUserJob);
+app.delete("/api/job/:id", deleteApiJobById);
+
 // ----------------api for service Order----------
+
 
 app.post('/api/sericeorders',apipostorder)
 

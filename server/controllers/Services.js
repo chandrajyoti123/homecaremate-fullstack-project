@@ -1,8 +1,8 @@
 import Service from "../models/Services.js";
 const postapiservices=async(req,res)=>{
-    const {service_name, service_img,service_sallary,service_info}=req.body;
+    const {service_name, service_img,service_sallary,service_info,salary_set,detailed_info}=req.body;
 
-    const service=new Service({service_name,service_img,service_sallary,service_info})
+    const service=new Service({service_name,service_img,service_sallary,service_info,salary_set,detailed_info})
    try{
     const savedservice= await service.save();
     return res.json({

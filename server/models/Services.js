@@ -19,6 +19,15 @@ const serviceschema=new Schema({
     service_info:{
         type:"String",
         default:"-"
+    },
+    salary_set:{
+        type:"array",
+        required:true,
+
+    },
+    detailed_info:{
+        type:"String",
+        required:true,
     }
 
 

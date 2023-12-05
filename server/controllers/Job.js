@@ -28,6 +28,15 @@ const postApiJob = async (req, res) => {
     }
 }
 
+const getApiJob = async (req, res) => {
+    const alltransaction = await Job.find();
+   return res.status(200).json({
+        success: true,
+        data: alltransaction,
+        message: "successfull User all Job fatched "
+    })
+}
+
 
 
 export {postApiJob, getApiJob, getApiUserJob, deleteApiJobById, }

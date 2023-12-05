@@ -44,7 +44,7 @@ app.get("/api/services/:_id",getapioneservices)
 // ------api for job------------
 
 app.post("/api/job", postApiJob);
-
+app.get("/api/job/", getApiJob);
 
   if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, '..', 'client', 'build')));

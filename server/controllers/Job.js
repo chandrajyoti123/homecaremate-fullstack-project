@@ -37,6 +37,25 @@ const getApiJob = async (req, res) => {
     })
 }
 
+const getApiUserJob = async (req, res) => {
+    const { id} = req.params;
+   try{
+    const order1 = await Job.find({user:{ _id: id }}).populate("user")
+  
+    res.json({
+      success:true,
+      data:order1,
+      message: "user Job fatch  successfully"
+    });
+   }
+   catch(e){
+    res.json({
+        success:false,
+        message: e.message
+      });
+   }
+  }
+
 
 
 export {postApiJob, getApiJob, getApiUserJob, deleteApiJobById, }

@@ -1,0 +1,69 @@
+.alltransaction-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.trans-container-main{
+    box-shadow: 0 2px 20px 0 rgb(137, 135, 135);
+    padding: 30px;
+    margin: 50px;
+    width: 500px;
+}
+.transaction-cards{
+    /* border: 1px solid #314259; */
+    box-shadow: 0 1px 10px 0  rgb(137, 135, 135); 
+    margin: 30px;
+    padding: 20px;
+    width: 500px;
+    position: relative;
+}
+.col-bla{
+    color: #314259;
+}
+.all-card-container{
+    height: 80vh;
+    margin-top: 40px;
+    
+    /* background-color: bisque; */
+    overflow-y: scroll;
+  }
+  .all-card-container::-webkit-scrollbar {
+    display: none;
+  }
+  .input-1{
+    display: inline-block;
+    margin: 15px;
+  }
+  .delete-text{
+    position: absolute;
+    right: 50px;
+    bottom: 5px;
+    color: red;
+    cursor: pointer;
+  }
+
+  .edit-text{
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    color: green;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width: 768px) {
+    .alltransaction-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .transaction-cards{
+       
+        /* margin: 30px; */
+        padding: 20px;
+        width: 350px;
+    }
+
+  }

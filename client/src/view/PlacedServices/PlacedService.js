@@ -98,6 +98,8 @@ export default function PlacedService() {
            alert(response?.data?.message)
         }
 
+        localStorage.removeItem("model")
+
     }
 
     return (

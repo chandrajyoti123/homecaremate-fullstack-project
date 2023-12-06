@@ -189,9 +189,7 @@ const [starcounts,setStarcounts]=useState(0)
             </div>
 
             <div className={`model-window ${modelnone} `}>
-                <img className='cross-img' src={close}
-                 onClick={closed_model}
-                 />
+                
                 <div className='experience'>share your experience</div>
                 <div className='star-container'>
                 <img src={starimg1} className='star-img' onClick={changestar1}/>
@@ -203,6 +201,10 @@ const [starcounts,setStarcounts]=useState(0)
                 <input type='text' placeholder='write here' className='review-input' value={message} onChange={(e)=>{
                     setMessage(e.target.value)
                 }}/>
+  {/* <img className='cross-img' src={close}
+                 onClick={closed_model}
+                 /> */}
+                <button type='button' className='btn' onClick={closed_model}>Done</button>
               
 
             </div>

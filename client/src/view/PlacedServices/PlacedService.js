@@ -86,7 +86,7 @@ export default function PlacedService() {
 
     const placedservice=async()=>{
         const response=await axios.post('/api/serviceorders',{
-            shift:shift, country:country, state:state, city:city, pincode:pincode, userid:userid , serviceid:_id, charges:fixedsal
+            shift:shift, country:country, state:state, city:city, pincode:pincode, userid:userid , serviceid:_id , charges:fixedsal
 
         })
         if(response?.data?.data){

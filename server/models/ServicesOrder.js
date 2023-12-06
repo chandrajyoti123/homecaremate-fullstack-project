@@ -1,4 +1,4 @@
-import { model,  Schema } from "mongoose";
+import mongoose, { model,  Schema } from "mongoose";
 const orderschema=new Schema({
     shift:{
         type:"String",
@@ -24,11 +24,13 @@ const orderschema=new Schema({
         required:true
     },
     userid:{
-        type:"String",
+        type:Schema.Types.ObjectId,
+        ref:"User",
         required:true
     },
     serviceid:{
-        type:"String",
+        type:Schema.Types.ObjectId,
+        ref:"Service",
         required:true
     },
     charges:{

@@ -1,4 +1,5 @@
 import Order from "../models/ServicesOrder.js";
+
 const postapiorder = async (req, res) => {
     const { shift, country, state, city, pincode, userid , serviceid, charges } = req.body
 
@@ -25,7 +26,8 @@ const postapiorder = async (req, res) => {
 
 
 const getapiorder=async( req,res)=>{
-    const allorder=await Order.find()
+    
+    const allorder=await Order.find().populate('userid serviceid')
     return res.json({
         success:true,
         data:allorder,

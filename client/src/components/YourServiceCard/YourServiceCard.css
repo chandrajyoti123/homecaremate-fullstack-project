@@ -1,0 +1,58 @@
+.your-service-card{
+    width: 78%;
+    height: 400px;
+
+    display: flex;
+    margin: 20px auto;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0,0.1);
+}
+
+.your-service-card1{
+    width: 35%;
+    height: 100%;
+   
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.yourserviceimg{
+    width: 300px;
+    margin-top: 20px;
+}
+
+
+.your-service-card2{
+    width: 65%;
+    height: 100%;
+    
+}
+.service-card-heading{
+    font-size: 50px;
+    font-size: 700;
+    margin-top: 10px;
+    text-align: center;
+
+}
+.list-of-order-info{
+    display: flex;
+    flex-direction: column;
+    margin:20px 10%;
+    height: 40%;
+    justify-content: space-around;
+}
+.charge-order{
+    font-size: 30px;
+    color: red;
+}
+.shift-order{
+    font-size: 30px;
+    color: black;
+}
+.address-order{
+    font-size: 30px;
+    color: green;
+}
+
+
+
+

@@ -6,8 +6,9 @@ import { postapilogin, postapiuser } from "./controllers/User.js";
 import { postapiservices, getapiservices,getapioneservices } from "./controllers/Services.js";
 import { postapiorder,getapiorder } from "./controllers/ServicesOrder.js";
 import { postApiJob,getApiJob , getApiUserJob, deleteApiJobById } from "./controllers/Job.js";
-
+import { postapireview,getapireview } from "./controllers/Review.js";
 import path from "path"
+
 
 
 
@@ -58,6 +59,11 @@ app.delete("/api/job/:id", deleteApiJobById);
 app.post('/api/serviceorders',postapiorder)
 app.get('/api/serviceorders',getapiorder)
 
+
+// -----------Review-----------
+
+ app.post('/api/reviews',postapireview)
+app.get('/api/reviews',getapireview)
     if (process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
 
@@ -67,7 +73,7 @@ app.get('/api/serviceorders',getapiorder)
    }
 
 
-// --------server is listning-----------
+ // --------server is listning-----------
 const PORT=process.env.PORT || 5000
 app.listen(PORT,()=>{
     console.log(`server is running in port ${PORT}`)

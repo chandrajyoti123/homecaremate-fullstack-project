@@ -7,32 +7,60 @@ const jobSchema = new Schema({
         ref : "User",
         required : true
     },
-    fullname : {
-        type :String,
+    first_name : {
+        type :'String',
         required : true,
     },
-    imageurl : {
-        type :String,
+    last_name : {
+        type :'String',
+        required : true,
+    },
+    phoneno : {
+        type :"Number",
+        required : true,
+        
+    },
+    email : {
+        type :"String",
+        required : true,
+        
+    },
+   image : {
+        type :'String',
         required : true,
     },
     address : {
-        type :String,
+        type :'String',
         required : true,
     },
-    addarno: {
-        type: Number,
+    adharno: {
+        type: 'Number',
         required: true,
     },
-    jobcategory : {
-        type : String,
-        enum: ['House Maid', 'Baby Sitters', 'Elder Care', 'Cooks', 'Patient Caretakers', 'Nurse'],
-        required : true,
-    },
+   
     gender : {
-        type : String,
-        enum: ['Male', 'Female'],
+        type : 'String',
+        enum: ['male', 'female','other'],
         require: true
     },
+    age:{
+        type:"Number",
+        required:true
+    },
+    jobcategory : {
+        type : 'String',
+        enum : ["home maid","baby sitter","nanny/japa","home cook","patient/elderly caretaker","home nurse"],
+        required : true,
+    },
+    shift:{
+        type:"String",
+        enum :["day shift","night shift","live in"],
+        required:true
+    },
+    expecting_salary:{
+        type:"Number",
+        
+    }
    
     
 },

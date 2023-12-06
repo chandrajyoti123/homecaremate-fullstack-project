@@ -1,6 +1,6 @@
 import React from 'react'
 import './ReviewCard.css'
-import star from './star.png'
+import stare from './star.png'
 import stared from './stared.png'
 import { useState } from 'react'
 
@@ -22,7 +22,11 @@ export default function ReviewCard({first_name,last_name,user_img,message,star})
         </div>
         <div className='review-card-child2'>
         {
-star!=1?star!=2?star!=3?star!=4?<div><img src={stared} className='star-img'/><img src={stared} className='star-img'/><img src={stared} className='star-img'/><img src={stared} className='star-img'/><img src={stared} className='star-img'/></div>:<div><img src={stared} className='star-img'/><img src={stared} className='star-img'/><img src={stared} className='star-img'/><img src={stared} className='star-img'/></div>:<div><img src={stared} className='star-img'/><img src={stared} className='star-img'/><img src={stared} className='star-img'/></div>:<div><img src={stared} className='star-img'/><img src={stared} className='star-img'/></div>:<img src={stared} className='star-img'/>
+star!=1?star!=2?star!=3?star!=4?<div><img src={stared} className='star-img'/><img src={stared} className='star-img'/><img src={stared} className='star-img'/><img src={stared} className='star-img'/><img src={stared} className='star-img'/></div>:
+<div><img src={stared} className='star-img'/><img src={stared} className='star-img'/><img src={stared} className='star-img'/><img src={stared} className='star-img'/><img src={stare} className='star-img'/></div>:
+<div><img src={stared} className='star-img'/><img src={stared} className='star-img'/><img src={stared} className='star-img'/><img src={stare} className='star-img'/><img src={stare} className='star-img'/></div>:
+<div><img src={stared} className='star-img'/><img src={stared} className='star-img'/><img src={stare} className='star-img'/><img src={stare} className='star-img'/><img src={stare} className='star-img'/></div>:
+<div><img src={stared} className='star-img'/><img src={stare} className='star-img'/><img src={stare} className='star-img'/><img src={stare} className='star-img'/><img src={stare} className='star-img'/></div>
 
     }
 

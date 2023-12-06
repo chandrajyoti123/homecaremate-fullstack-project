@@ -5,7 +5,7 @@ dotenv.config();
 import { postapilogin, postapiuser } from "./controllers/User.js";
 import { postapiservices, getapiservices,getapioneservices } from "./controllers/Services.js";
 import { postapiorder,getapiorder } from "./controllers/ServicesOrder.js";
-import { postApiJob,getApiJob , getApiUserJob, deleteApiJobById } from "./controllers/Job.js";
+import { postApiJob,getapijob} from "./controllers/Job.js";
 import { postapireview,getapireview } from "./controllers/Review.js";
 import path from "path"
 
@@ -48,10 +48,10 @@ app.get("/api/services/:_id",getapioneservices)
 
 // ------api for job------------
 
-app.post("/api/job", postApiJob);
-app.get("/api/job/", getApiJob);
-app.get("/api/job/user/:id", getApiUserJob);
-app.delete("/api/job/:id", deleteApiJobById);
+app.post("/api/jobs", postApiJob);
+app.get("/api/jobs", getapijob);
+// app.get("/api/job/user/:id", getApiUserJob);
+// app.delete("/api/job/:id", deleteApiJobById);
 
 // ----------------api for service Order----------
 

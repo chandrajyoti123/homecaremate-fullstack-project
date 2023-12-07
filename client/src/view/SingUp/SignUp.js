@@ -3,6 +3,7 @@ import './SignUp.css';
 import { Link } from 'react-router-dom';
 import signupimg from './../../images/Mobile-login.svg'
 import axios from 'axios';
+import Navbar from '../../components/Navbar/Navbar';
 export default function SignUp() {
 
   const [firstname, setFirstname] = useState('')
@@ -27,8 +28,21 @@ export default function SignUp() {
       return
     }
     if (!phoneno) {
-      alert('enter first name')
+      alert('enter phone no')
       return
+    }
+    if(!password1){
+      alert("enter password")
+      return
+    }
+    if(!password2){
+      alert("enter confirm password")
+      return
+    }
+    if(password1!=password2){
+      alert("password should same")
+      return
+
     }
     
 
@@ -60,7 +74,7 @@ export default function SignUp() {
 
   return (
     <>
-
+     <Navbar/>
       <div className='signup-container'>
 
         <div className='singup-child1'>

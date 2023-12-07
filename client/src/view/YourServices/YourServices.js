@@ -161,6 +161,7 @@ const [starcounts,setStarcounts]=useState(0)
       document.body.style.overflowY = "scroll"
  }
 //  console.log(userimg)
+console.log(user_id)
 
 
     return (
@@ -191,6 +192,8 @@ const [starcounts,setStarcounts]=useState(0)
             <div className={`model-window ${modelnone} `}>
                 
                 <div className='experience'>share your experience</div>
+                <div className='rate-us-con'>
+                <div className='rate-us'>Rate Us</div>
                 <div className='star-container'>
                 <img src={starimg1} className='star-img' onClick={changestar1}/>
                 <img src={starimg2} className='star-img' onClick={changestar2} />
@@ -198,13 +201,23 @@ const [starcounts,setStarcounts]=useState(0)
                 <img src={starimg4} className='star-img' onClick={changestar4} />
                 <img src={starimg5} className='star-img' onClick={changestar5} />
                 </div>
+                </div>
+{/* <div className='input-group'>
+                <label for="message" className='input-label'> Review of W3Schools:</label>
+                <textarea id="message"  rows="3" cols="50" className='review-inpute-feild'>
+
+            </textarea>
+
+</div> */}      <div className='rate-us-con'>
+                <div className='rate-us'>Write Message</div>
                 <input type='text' placeholder='write here' className='review-input' value={message} onChange={(e)=>{
                     setMessage(e.target.value)
                 }}/>
+                </div>
   {/* <img className='cross-img' src={close}
                  onClick={closed_model}
                  /> */}
-                <button type='button' className='btn' onClick={closed_model}>Done</button>
+                <button type='button' className='btn review-btn' onClick={closed_model}>Done</button>
               
 
             </div>

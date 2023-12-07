@@ -6,6 +6,7 @@ import { useState } from 'react'
 
 export default function ReviewCard({first_name,last_name,user_img,message,star}) {
     // const [starcounts,setStarcounts]=useState(star)
+  
   return (
     <div className='review-card'>
         <div className='review-card-child1'>

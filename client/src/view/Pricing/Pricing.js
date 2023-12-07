@@ -23,14 +23,23 @@ export default function Pricing() {
   return (
     <div>
       <Navbar/>
+      <div className='main-container'>
+
+      <div className='heading'>
+              our customers reviews
+            </div>
+
+      
       {
         reviews.map((review,i)=>{
           const { message,image,star,user}=review
-          return <ReviewCard message={message} first_name={user.first_name} last_name={user.last_name} star={star} user_img={image} />
+          return <ReviewCard message={message} first_name={user.first_name} last_name={user.last_name} star={star} user_img={image}  />
           
 
            })
       }
+
+</div>
     
     
    

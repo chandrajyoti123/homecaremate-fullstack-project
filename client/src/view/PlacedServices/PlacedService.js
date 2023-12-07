@@ -105,16 +105,20 @@ export default function PlacedService() {
     return (
         <div>
             <Navbar />
-            <div className='service-order-heading'>
-                Discover Exceptional Care: Our Comprehensive Range of Services
+            <div className='main-container'>
+           
+            <div className='heading'>
+               Our Comprehensive Range of Services
             </div>
+            <div className='service_name'>{service.service_name}</div>
+            <div className='service-info'>{service.detailed_info}</div>
 
             <div className='services-container'>
 
                 <div className='services-con-child1' >
-                    <div className='service_name'>{service.service_name}</div>
+                   
                     <img src={service.service_img} className='img-services' />
-                    <div className='service-info'>{service.detailed_info}</div>
+                   
                 </div>
 
                 <div className='services-con-child2'>
@@ -192,67 +196,7 @@ export default function PlacedService() {
                     <button className='btn' type='button' onClick={placedservice}>Done</button>
                 </div>
             </div>
-            {/* <div>
-
-                this is detailed services page
-
-                <h1>{service.service_name}</h1>
-                <img src={service.service_img} />
-                <div>{service.detailed_info}</div>
-                {
-                    salarydata.map((data)=>{
-                        return <h1>{data}</h1>
-
-                    })
-                }
-            </div> */}
-            {/* <select value={country} onChange={(e) => {
-                setCountry(e.target.value)
-            }} >
-
-                {
-                    countries.map((countryone) => {
-
-
-                        return <option value={countryone.country_name}>{countryone.country_name}</option>
-                    })
-                }
-
-            </select>
-
-            <select value={state} onChange={(e) => {
-
-
-                setState(e.target.value)
-            }} >
-
-                {
-                    states.map((state) => {
-                        if (state.country_id == countryid) {
-                            return <option value={state.state_name}>{state.state_name}</option>
-
-                        }
-                        // else{
-                        //     return <option value={state.state_name}>{state.state_name}</option>
-                        // }
-
-                    })
-                }
-
-
-            </select>
-
-           <select>
-            {
-                Cities.map((cityone)=>{
-
-                    if(cityone.state_id==stateid){
-                        return <option value={cityone.city_name}>{cityone.city_name}</option>
-                    }
-                   
-                })
-            }
-           </select> */}
+            </div>
 
 
 

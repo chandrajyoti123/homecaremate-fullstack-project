@@ -88,13 +88,15 @@ height: 100%;
 .popwindow{
     width: 300px;
     height: 450px;
-    background-color: rgb(244, 244, 132);
+    background-color: rgb(10, 105, 143);
     position: absolute;
     right: 7%;
     top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* box-shadow: #0a6a91; */
+ 
     
 }
 
@@ -134,7 +136,7 @@ height: 100%;
     font-size: 20px;
     background-color:white;
     display: inline-block;
-    padding: 5px 8px;
+    padding: 5px 30px;
     border-radius: 30px;
     box-shadow: 0 0 10px 2px rgba(25, 25, 25,0.3);
     margin-top: 10px;
@@ -149,10 +151,12 @@ height: 100%;
 }
 .popwindow ul li{
     list-style: none;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 700;
     margin: 7px 0;
     cursor: pointer;
+    text-transform: capitalize;
+    color: white;
 
     
 }
@@ -163,4 +167,7 @@ height: 100%;
    margin: 70px auto !important;
 
    
+}
+.white{
+    color: white;
 }

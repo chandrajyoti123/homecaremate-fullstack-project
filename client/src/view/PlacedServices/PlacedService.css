@@ -24,15 +24,20 @@
 }
 
 .service_name{
-    font-size: 40px;
-    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: start;
+    margin-top: 50px;
+   
 }
 .img-services{
     width: 400px;
+    margin-top: 100px;
 }
 .service-info{
-    font-size: 20px;
+    font-size: 25px;
     text-align: justify;
+    margin: 10px 0;
 }
 .services-con-child2{
     width: 50%;

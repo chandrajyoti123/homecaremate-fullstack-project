@@ -1,18 +1,37 @@
 .service-card{
     width: 450px;
-    height: auto;
+    height: 440px;
     padding: 10px;
-    background-color: lightblue;
+    
     box-shadow: 0 0 10px 1px black;
-    margin-top: 3cd 0px;
-}
-.service-heading{
-    text-align: center;
-    font-size: 25px;
-    color: black;
+    margin-top: 3px 0px;
+    padding-top: 15px;
 }
 .service-caption{
     text-align: justify;
     font-size: 20px;
-    color: blue;
+    color: black;
+    margin-top: 20px;
+   
+}
+
+.service-heading{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: black;
+ 
+
+}
+.service-img{
+    width: 200px;
+    height: 220px;
+    display: block;
+    margin: 10px auto;
+ 
+}
+
+.text-docation{
+    text-decoration: none;
 }

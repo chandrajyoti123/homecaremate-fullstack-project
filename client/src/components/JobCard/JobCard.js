@@ -6,23 +6,9 @@ export default function JobCard({img,firstname,lastname,jobcategory,shift,phone_
         <div className='jobcard-container'>
             <img src={img} className='job-can-img' />
             <div className='job-can-name'>{firstname} {lastname}</div>
-            <div className='job-can-post'>{jobcategory} ({shift})</div>
-            <div className='job-can-field'>
-                <div className='field-key'>
-                    phone no
-                </div>
-                <div className='field-value'>
-                    : {phone_no}
-                </div>
-            </div>
-            <div className='job-can-field'>
-                <div className='field-key'>
-                   email
-                </div>
-                <div className='field-value'>
-                    :{email}
-                </div>
-            </div>
+            <div className='job-can-post'>{jobcategory} </div>
+         
+            
             <div className='job-can-field'>
                 <div className='field-key'>
                    age
@@ -42,18 +28,18 @@ export default function JobCard({img,firstname,lastname,jobcategory,shift,phone_
             </div>
             <div className='job-can-field'>
                 <div className='field-key'>
-                   adhar no
+                   shift
                 </div>
                 <div className='field-value'>
-                    : {adhar_no}
+                    : {shift}
                 </div>
             </div>
             <div className='job-can-field'>
                 <div className='field-key'>
-                   address
+                  status
                 </div>
                 <div className='field-value'>
-                    : {address}
+                    : Availabe
                 </div>
             </div>
             

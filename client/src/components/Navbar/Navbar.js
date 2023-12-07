@@ -44,6 +44,7 @@ export default function Navbar() {
         const base64 = await convertToBase64(file);
         localStorage.setItem("userimg", JSON.stringify(base64))
         setUrl(base64)
+       
         // setPostImage({ ...postImage, myFile: base64 })
     }
 
@@ -55,6 +56,7 @@ export default function Navbar() {
         loaduserimg()
 
     }, [url])
+    console.log(userimage)
 
     const logout=()=>{
         localStorage.removeItem('loginuser')
@@ -110,12 +112,12 @@ export default function Navbar() {
                 </div>
                 <div className='your-profile'>Your profile</div>
                 <ul>
-                  <li><Link to={'/yourservices'} className='nav-link'>services</Link></li>
+                  <li><Link to={'/yourservices'} className='nav-link white'> your services</Link></li>
                    <li>setting</li>  
                    <li>   tools</li>
                 </ul>
 
-                <button className='sign-btn logout' onClick={logout}>log out</button>
+                <button className='btn logout' onClick={logout}>log out</button>
 
 
             </div>

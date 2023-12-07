@@ -62,6 +62,7 @@ body{
 .poster-img{
     border-radius:  20px;
     height: 500px;
+    
 }
 .bg-orange{
     
@@ -93,7 +94,24 @@ background-color: white;
     flex-wrap: wrap;
     /* background-color: rgba(157, 157, 157, 0.169); */
     margin-bottom: 30px;
+    height: 500px;
+   
+   
+  
 }
+
+  .scroll{
+    display: flex;
+    overflow-X: scroll;
+    padding:20px 100px ;
+   
+    justify-content: center; 
+    margin:20px 40px;
+
+}
+.scroll::-webkit-scrollbar {
+    display: none;
+  }
 .col-light{
   background-color: rgba(157, 157, 157, 0.169);
   padding: 70px 10px; 
@@ -123,6 +141,11 @@ background-color: white;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+.mar-center{
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
 }
 
 @media screen and  (max-width:768px) {

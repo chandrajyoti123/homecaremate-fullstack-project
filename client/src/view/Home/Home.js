@@ -6,18 +6,19 @@ import axios from 'axios'
 import Navbar from '../../components/Navbar/Navbar'
 
 export default function Home() {
-  // const [card, setCard] = useState([])
+  const [card, setCard] = useState([])
 
-  // const loadData = async () => {
-  //   const responce = await axios.get("/api/job/")
-  //   setCard(responce?.data?.data)
-  //   console.log(responce?.data?.data)
+  const loadData = async () => {
+    const responce = await axios.get("/api/jobs")
+    // const response = await axios.get('/api/jobs')
+    setCard(responce?.data?.data)
+    console.log(responce?.data?.data)
 
-  // }
+  }
 
-  // useEffect(() => {
-  //   loadData()
-  // }, [])
+  useEffect(() => {
+    loadData()
+  }, [])
 
   return (
     <div>
@@ -50,7 +51,7 @@ export default function Home() {
         </div>
 
         <div className='use-card'>
-          <h3 className='p-10 '> Verified Professionals </h3>
+          <h3 className='p-10 '> Comprehensive Database </h3>
           <p className='col-black'>Explore a diverse and extensive database of skilled professionals, including domestic helpers, caregivers, and other household service providers. Helper4U offers a wide range of options to cater to your specific needs </p>
         </div>
 
@@ -75,31 +76,39 @@ export default function Home() {
         </div>
         </div>
       </div>
-
-      {/* <div className='jobcard-container'>
+     <h1 className='img-container'>Our Services</h1>
+      <div className='scroll'>
         {
           card.map((card, i) => {
-            const { fullname, imageurl, address, addarno, jobcategory, gender, mobileno } = card;
+            const { first_name, last_name, phoneno, email, image, address, adharno, gender, age, jobcategory, shift } = card;
 
             return (
               <div className='job-card'>
                 <div className='img-container'>
-                  <img className='img-card' src={imageurl} />
+                  <img className='img-card' src={image} />
                 </div>
-                <h3>Name : {fullname}</h3>
-                <p>Addar No : {addarno}</p>
-                <p>Mobile No : {mobileno}</p>
+                <h3>Name : {first_name} {last_name}</h3>
+                <p>Addar No : {adharno}</p>
+                <p>Mobile No : {phoneno}</p>
                 <p>Type: {jobcategory}</p>
 
                 <p className='p-10'>< hr /></p>
                 <p>Address : {address}</p>
 
               </div>
+
             )
           })
+         
         }
+       
 
-      </div> */}
+      </div>
+     <div className='img-container'>
+     <button type='button' className='btn btnjob mar-center' onClick={ ()=>{
+          window.location.href = '/services'
+         }}>Show more</button>
+     </div>
 
     </div>
   )

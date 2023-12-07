@@ -95,7 +95,11 @@ export default function JobHere() {
 
   useEffect(()=>{
     loadloginuser();
+
+   
+
     // window.location.href = '/services'
+
   },[])
   console.log(user_id)
   return (

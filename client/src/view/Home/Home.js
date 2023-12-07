@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import './Home.css'
 import axios from 'axios'
 import Navbar from '../../components/Navbar/Navbar'
+import Footer from '../../components/Footer/Footer'
 
 export default function Home() {
   const [card, setCard] = useState([])
@@ -27,7 +28,7 @@ export default function Home() {
         <h3>Maid, Cook, Baby Sitters, Patient Care and Elder Care Services in Your City.</h3>
         <h1>_______</h1>
         <h1 className='pt-100'> </h1>
-        <h1 className=' '> Helper4U </h1>
+        <h1 className=' '> HomeCareMate </h1>
         <p>Helper4U offers professional domestic services such as maids, cooks, babysitters, patient care, and elder care in Your City.</p>
       </div>
 
@@ -36,18 +37,18 @@ export default function Home() {
           <img className='poster-img' src='https://www.bookmybai.com/images/home-bai-img.png' alt='img' />
         </div>
         <div className='home-poster-text'>
-          <h1 className='heding-poster'>Welcome to Helper4U</h1>
+          <h1 className='heding-poster'>Welcome to HomeCareMate</h1>
           <h3> </h3>
-          <p className='para-text'>Welcome to Helper4U, your trusted online platform connecting households with reliable domestic help. Just like Kamvali, we understand the importance of finding skilled and trustworthy assistance for your home. Helper4U simplifies the hiring process, offering a seamless experience for both employers and job seekers. Explore our comprehensive database of verified professionals, whether you're seeking domestic helpers, caregivers, or other household services. With Helper4U, discover the right match for your needs, ensuring a secure and efficient solution for all your domestic staffing requirements.</p>
+          <p className='para-text'>Welcome to HomeCareMate, your trusted online platform connecting households with reliable domestic help. Just like Kamvali, we understand the importance of finding skilled and trustworthy assistance for your home. Helper4U simplifies the hiring process, offering a seamless experience for both employers and job seekers. Explore our comprehensive database of verified professionals, whether you're seeking domestic helpers, caregivers, or other household services. With Helper4U, discover the right match for your needs, ensuring a secure and efficient solution for all your domestic staffing requirements.</p>
         </div>
       </div>
       <div className='col-light'>
-      <h1 className='img-container col-blue'> Why Use Helper4U </h1>
+      <h1 className='img-container col-blue'> Why Use HomeCareMate </h1>
       <div className='whyuse-card'>
         
         <div className='use-card'>
           <h3 className='p-10 '> Verified Professionals </h3>
-          <p className='col-black'>Helper4U takes the hassle out of hiring by providing a platform with verified and background-checked domestic helpers. Trust and reliability are at the core of our service.</p>
+          <p className='col-black'>HomeCareMate takes the hassle out of hiring by providing a platform with verified and background-checked domestic helpers. Trust and reliability are at the core of our service.</p>
         </div>
 
         <div className='use-card'>
@@ -109,6 +110,8 @@ export default function Home() {
           window.location.href = '/services'
          }}>Show more</button>
      </div>
+  </div> */}
+<Footer/>
 
     </div>
   )

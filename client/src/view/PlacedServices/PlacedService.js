@@ -96,7 +96,7 @@ export default function PlacedService() {
         })
         if(response?.data?.data){
             alert("your services placed successfully")
-            window.location.href='/services'
+            window.location.href='/yourservices'
 
         }
         else{

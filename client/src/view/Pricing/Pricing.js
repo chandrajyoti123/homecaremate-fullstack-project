@@ -4,8 +4,10 @@ import axios from 'axios'
 import star from './star.png'
 import stared from './stared.png'
 import ReviewCard from '../../components/ReviewCard/ReviewCard'
+import Footer from '../../components/Footer/Footer'
 export default function Pricing() {
   const [reviews,SetReviews]=useState([])
+  
   
   
   
@@ -40,23 +42,8 @@ export default function Pricing() {
       }
 
 </div>
+<Footer/>
     
-    
-   
-
-   
-
-
-      
-
-        
-        <div>
-           
-             { 
-           
-              }
-             
-          </div> 
-    </div>
+ </div>
   )
 }

@@ -1,7 +1,7 @@
 import Job from "./../models/Job.js"
 
 const postApiJob = async (req, res) => {
-    const {user, fullname, imageurl, address, addarno, jobcategory, gender } = req.body;
+    const {user, fullname, imageurl, address, addarno, jobcategory, gender, mobileno } = req.body;
 
     const job = new Job({
         user,
@@ -10,7 +10,8 @@ const postApiJob = async (req, res) => {
         address,
         addarno,
         jobcategory,
-        gender
+        gender,
+        mobileno
     })
 
     try {

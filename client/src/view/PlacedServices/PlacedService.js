@@ -63,8 +63,8 @@ export default function PlacedService() {
 
     const statecodefind = () => {
         states.map((stateone) => {
-            if (stateone.state_name == state) {
-                setStateid(stateone.state_id)
+            if (stateone.state_name == state) {  
+                setStateid(stateone.state_id)   
             }
         })
     }

@@ -12,6 +12,7 @@ function JobHere() {
 
   const [user, setUser] = useState("");
   const [fullname, setFullname] = useState("");
+  const [mobileno, setMobileno] = useState();
   const [imageurl, setImageurl] = useState("");
   const [address, setAddress] = useState("");
   const [addarno, setAddarno] = useState("");
@@ -23,7 +24,7 @@ function JobHere() {
   const [job, setJob] = useState([]);
 
   const loadposttransaction = async () => {
-   
+
     if (!fullname) {
       showToast('Fullname is required', 'alert', 6000);
     }
@@ -36,6 +37,9 @@ function JobHere() {
     if (!address) {
       showToast('Address is required', 'alert', 6000);
     }
+    if (!mobileno) {
+      showToast('Mobile no is required', 'alert', 6000);
+    }
 
 
 
@@ -46,7 +50,8 @@ function JobHere() {
       addarno,
       address,
       jobcategory,
-      gender
+      gender,
+      mobileno
     }
 
     const response = await axios.post("/api/job", data)
@@ -63,6 +68,7 @@ function JobHere() {
       setImageurl('')
       setAddarno('')
       setAddress('')
+      setMobileno()
 
     }
 
@@ -112,8 +118,8 @@ function JobHere() {
   return (
 
     <div>
-   
-<Navbar/>
+
+      <Navbar />
       <div className='alltransaction-container'>
         <div className='trans-container-main'>
           <h1>Add Job Details ➕</h1>
@@ -129,7 +135,7 @@ function JobHere() {
               setFullname(e.target.value)
             }}
           />
-<div className='input-1'></div>
+          <div className='input-1'></div>
           <input type='text'
             className='input-field'
             placeholder='Enter Image URL'
@@ -138,8 +144,19 @@ function JobHere() {
               setImageurl(e.target.value)
             }}
           />
-<div className='input-1'></div>
-<input type='text'
+
+          <div className='input-1'></div>
+          <input type='text'
+            className='input-field'
+            placeholder='Enter Mobile no.'
+            value={mobileno}
+            onChange={(e) => {
+              setMobileno(e.target.value)
+            }}
+          />
+
+          <div className='input-1'></div>
+          <input type='text'
             className='input-field'
             placeholder='Enter Addar No.'
             value={addarno}
@@ -147,8 +164,8 @@ function JobHere() {
               setAddarno(e.target.value)
             }}
           />
-<div className='input-1'></div>
-<input type='text'
+          <div className='input-1'></div>
+          <input type='text'
             className='input-field'
             placeholder='Enter Address'
             value={address}
@@ -156,7 +173,7 @@ function JobHere() {
               setAddress(e.target.value)
             }}
           />
-<div className='input-1'></div>
+          <div className='input-1'></div>
           <select className='input-field'
             value={jobcategory}
             onChange={(e) => {
@@ -170,29 +187,29 @@ function JobHere() {
             <option>Cooks</option>
             <option>Patient Caretakers</option>
             <option>Nurse</option>
-            
+
           </select>
           <div className='input-1'></div>
-         <div>
-         <input type='radio'
-            name='radio'
-            checked={gender === 'Male'}
-            value={gender}
-            onClick={() => {
-              setGender('Male');
-            }}
-          /> Male <span></span><span></span><span></span>
+          <div>
+            <input type='radio'
+              name='radio'
+              checked={gender === 'Male'}
+              value={gender}
+              onClick={() => {
+                setGender('Male');
+              }}
+            /> Male <span></span><span></span><span></span>
 
-          <input type='radio'
-            name='radio'
-            checked={gender === 'Female'}
-            value={gender}
-            onClick={() => {
-              setGender('Female');
-            }}
-          /> Female
-         </div>
-         <div className='input-1'></div>
+            <input type='radio'
+              name='radio'
+              checked={gender === 'Female'}
+              value={gender}
+              onClick={() => {
+                setGender('Female');
+              }}
+            /> Female
+          </div>
+          <div className='input-1'></div>
 
           <p> <button onClick={loadposttransaction} className='btn'>  Register </button></p>
 
@@ -203,31 +220,31 @@ function JobHere() {
         <div className='all-card-container'>
           {
             job?.map((job, i) => {
-              const { _id, fullname, addarno, address, jobcategory, imageurl, gender } = job;
+              const { _id, fullname, addarno, address, jobcategory, imageurl, gender , mobileno} = job;
 
               return (
                 <div className='transaction-cards' key={i}>
                   <p className='category-transaction'>Name:  {fullname} </p>
                   <p>Addar No : {addarno} </p>
-
-                  <span>Job Category : {jobcategory} </span> 
+<p>Mobile no : {mobileno}</p>
+                  <span>Job Category : {jobcategory} </span>
                   <span>Gender : {gender} </span>
                   <hr />
                   <p>Address : {address}</p>
-                  
 
 
 
-                 
 
-                
+
+
+
 
                   <span className='delete-text' onClick={() => {
                     deleteTransition(_id);
                   }}> Delete </span>
 
                   <span className='edit-text' onClick={() => {
-                    
+
                   }}> Edit </span>
                 </div>
               )

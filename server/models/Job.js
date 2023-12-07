@@ -27,7 +27,7 @@ const jobSchema = new Schema({
     },
    image : {
         type :'String',
-        required : true,
+        
     },
     address : {
         type :'String',

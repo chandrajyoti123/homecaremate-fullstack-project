@@ -100,6 +100,7 @@
     width: 50%;
     height: 900px;
     /* background-color: lightblue; */
+    padding-top: 30px;
 
   }
   .job-form-section2{
@@ -123,11 +124,18 @@
     display: flex;
    
 justify-content: space-between;
-    margin: 10px 0;
+    /* margin: 10px 0; */
   }
   .jobuser-img{
-    width: 160px;
-    margin-top: 50px;
+    width: 170px;
+    margin: 55px 0 40px 0;
+    height: 170px;
+    
+    padding: 2px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 1px rgba(12, 12, 12,0.1);
+
+  
   }
   .agefield{
     width: 100% !important;
@@ -140,6 +148,7 @@ justify-content: space-between;
   .job-user-gender{
     display: flex;
     margin-top: 10px;
+    
   }
   .radio-field{
    margin-right: 5px;
@@ -151,7 +160,7 @@ justify-content: space-between;
     font-size: 20px !important;
   }
   .selec-field{
-    width: 45%;
+    width: 95%;
     height: 45px;
     font-size: 20px;
     padding-left: 10px;

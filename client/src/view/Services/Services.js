@@ -3,6 +3,7 @@ import Navbar from '../../components/Navbar/Navbar'
 import ServiceCard from '../../components/ServiceCard/ServiceCard'
 import axios from "axios"
 import './Services.css'
+import JobCard from '../../components/JobCard/JobCard'
 
 
 
@@ -30,6 +31,10 @@ useEffect(()=>{
 
   })
 }
+</div>
+
+<div>
+  <JobCard/>
 </div>
     </div>
   )

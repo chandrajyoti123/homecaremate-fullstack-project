@@ -6,8 +6,9 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import './JobHere.css'
 import Navbar from './../../components/Navbar/Navbar.js'
-// import showToast from 'crunchy-toast';
+
 import user_img from './user-img2.png'
+
 
 
 function JobHere() {
@@ -26,11 +27,70 @@ function JobHere() {
   const [gender, setGender] = useState("");
   const [shift, setShift] = useState('');
   const [expectingsa, setExpectingsa] = useState('')
+  const [user_id, setUser_id] = useState('')
+  // ------------imgae url----------
+
+  const [postImage, setPostImage] = useState({ myFile: "" })
+    const [url, setUrl] = useState('')
+    const handleFileUpload = async (e) => {
+        const file = e.target.files[0];
 
 
+        const base64 = await convertToBase64(file);
+        localStorage.setItem("jobcanimg", JSON.stringify(base64))
+        setUrl(base64)
+        setPostImage({ ...postImage, myFile: base64 })
+    }
+ 
+
+    const loaduserimg = () => {
+      const response = JSON.parse(localStorage.getItem('jobcanimg'))
+      setImage(response)
+  }
+  useEffect(() => {
+      loaduserimg()
+
+  }, [url])
 
 
+  const loadloginuser = () => {
+    const response = JSON.parse(localStorage.getItem('loginuser'))
+    setUser_id(response._id)
+  }
+  const postapljobfun=async()=>{
+    const response=await axios.post('/api/jobs',{
+      user:user_id,
+      first_name:firstname,
+      last_name:lastname,
+      phoneno:phoneno,
+      email:email,
+      image:image,
+      address:address,
+      adharno:adharno,
+      gender:gender,
+      age:age,
+      jobcategory:jobcategory,
+      shift:shift,
+      expecting_salary:expectingsa
+    })
+    if(response?.data?.data){
 
+      alert(response?.data?.message)
+      localStorage.removeItem("jobcanimg")
+      window.location.href = '/'
+
+    }
+    else(
+      alert(response?.data?.message)
+    )
+
+  }
+  useEffect(()=>{
+    loadloginuser();
+  },[])
+  console.log(user_id)
+
+  
 
   // const loadposttransaction = async () => {
 
@@ -114,7 +174,6 @@ function JobHere() {
 
   // }, [])
 
-
   return (
     <>
       <Navbar />
@@ -155,8 +214,8 @@ function JobHere() {
             <div className='input-group'>
               <label className='input-label'>Phone No</label>
               <input type='number' placeholder=' +91' className='input-field jobfield'
-                value={firstname} onChange={(e) => {
-                  setFirstname(e.target.value)
+                value={phoneno} onChange={(e) => {
+                  setPhoneno(e.target.value)
                 }} />
             </div>
 
@@ -186,11 +245,27 @@ function JobHere() {
 
           </div>
           <div className='job-form-section2'>
-            <img src={user_img} className='jobuser-img' />
+            
+          <label htmlFor="job-image-upload" className='uploadlabel' >
+             <img src={image?image:user_img} className='  jobuser-img'   /> 
+
+            </label>
+            <input
+                className='displaynone'
+                type="file"
+                lable="Images"
+                name="myFile"
+                id='job-image-upload'
+                accept='.jpeg, .png, .jpg'
+                onChange={(e) => handleFileUpload(e)}
+
+            />
+
+           
             <div className='job-field-con'>
               <div className='input-group'>
                 <label className='input-label'>Age</label>
-                <input type='Number' placeholder='XXXX XXXX XXXX' className='input-field jobfield agefield'
+                <input type='Number' placeholder='Ex.,20 year' className='input-field jobfield agefield'
                   value={age} onChange={(e) => {
                     setAge(e.target.value)
                   }} />
@@ -199,65 +274,73 @@ function JobHere() {
 
               <div className='input-group radio-group'>
                 <label className='input-label'>Gender</label>
-              <div className="job-user-gender">
-                <div className="radio-field">
-                  <input type="radio" value={"male"} id="male" className="radio"
-                    onChange={(e) => {
-                      setGender(e.target.value)
-                    }} checked={gender == "male"}
-                  />
-                  <label className="radio-label" for="male">Male</label>
-                </div>
+                <div className="job-user-gender">
+                  <div className="radio-field">
+                    <input type="radio" value={"male"} id="male" className="radio"
+                      onChange={(e) => {
+                        setGender(e.target.value)
+                      }} checked={gender == "male"}
+                    />
+                    <label className="radio-label" for="male">Male</label>
+                  </div>
 
-                <div className="radio-field">
-                  <input type="radio" value={"female"} id="female" className="radio"
-                    onChange={(e) => {
-                      setGender(e.target.value)
-                    }} checked={gender == "female"}
-                  />
-                  <label className="radio-label" for="female">Female</label>
-                </div>
+                  <div className="radio-field">
+                    <input type="radio" value={"female"} id="female" className="radio"
+                      onChange={(e) => {
+                        setGender(e.target.value)
+                      }} checked={gender == "female"}
+                    />
+                    <label className="radio-label" for="female">Female</label>
+                  </div>
 
-                <div className="radio-field">
-                  <input type="radio" value={"other"} id="other" className="radio"
-                    onChange={(e) => {
-                      setGender(e.target.value)
-                    }} checked={gender == "other"}
-                  />
-                  <label className="radio-label" for="other">other</label>
+                  <div className="radio-field">
+                    <input type="radio" value={"other"} id="other" className="radio"
+                      onChange={(e) => {
+                        setGender(e.target.value)
+                      }} checked={gender == "other"}
+                    />
+                    <label className="radio-label" for="other">other</label>
+                  </div>
                 </div>
-              </div>
               </div>
 
             </div>
-            
-            <div className='job-field-con'>
-              <select value={jobcategory} onChange={(e)=>{
-                onchange(e.target.value)
-              }}  className="selec-field">
-                <option>select a category</option>
-                <option value={'home maid'} >home maid</option>
-                <option value={'baby sitter'} >baby sitter</option>
-                <option value={'nanny/japa'} >nanny/japa</option>
-                <option value={'home cook'} >home cook</option>
-                <option value={'patient/elderly caretaker'} >patient/elderly caretaker</option>
-                <option value={'home nurse'} >home nurse</option>
- 
-              </select>
 
-              <select value={shift} onChange={(e)=>{
-                setShift(e.target.value)
-              
-              }} className="selec-field">
-                <option>select a shift
-                </option>
-                <option value={'day shift'} >day shift</option>
-                <option value={'night shift'} >night shift</option>
-                <option value={'live in'} >live in</option>
-               
- 
-              </select>
-              
+            <div className='job-field-con'>
+              <div className='input-group'>
+                <label className='input-label'>Select Category</label>
+                <select value={jobcategory} onChange={(e) => {
+                  setJobcategory(e.target.value)
+                }} className="selec-field">
+                  <option>select a category</option>
+                  <option value={'home maid'} >home maid</option>
+                  <option value={'baby sitter'} >baby sitter</option>
+                  <option value={'nanny/japa'} >nanny/japa</option>
+                  <option value={'home cook'} >home cook</option>
+                  <option value={'patient/elderly caretaker'} >patient/elderly caretaker</option>
+                  <option value={'home nurse'} >home nurse</option>
+
+                </select>
+              </div>
+
+              <div className='input-group'>
+                <label className='input-label'>Shift</label>
+                <select value={shift} onChange={(e) => {
+                  setShift(e.target.value)
+
+                }} className="selec-field">
+                  <option>select a shift
+                  </option>
+                  <option value={'day shift'} >day shift</option>
+                  <option value={'night shift'} >night shift</option>
+                  <option value={'live in'} >live in</option>
+
+
+                </select>
+              </div>
+
+
+
 
 
             </div>
@@ -270,7 +353,7 @@ function JobHere() {
                 }} />
             </div>
             <div className='justify-start'>
-            <button type='button' className='btn btnjob'>Submit</button>
+              <button type='button' className='btn btnjob' onClick={postapljobfun}>Submit</button>
             </div>
 
 
@@ -283,132 +366,21 @@ function JobHere() {
 
     </>
 
-    //     <div>
-
-    // <Navbar/>
-    //       <div className='alltransaction-container'>
-    //         <div className='trans-container-main'>
-    //           <h1>Add Job Details ➕</h1>
-    //           <p></p>
-
-
-    //           <div className='input-1'></div>
-    //           <input type='text'
-    //             className='input-field'
-    //             placeholder='Enter Full Name'
-    //             value={fullname}
-    //             onChange={(e) => {
-    //               setFullname(e.target.value)
-    //             }}
-    //           />
-    // <div className='input-1'></div>
-    //           <input type='text'
-    //             className='input-field'
-    //             placeholder='Enter Image URL'
-    //             value={imageurl}
-    //             onChange={(e) => {
-    //               setImageurl(e.target.value)
-    //             }}
-    //           />
-    // <div className='input-1'></div>
-    // <input type='text'
-    //             className='input-field'
-    //             placeholder='Enter Addar No.'
-    //             value={addarno}
-    //             onChange={(e) => {
-    //               setAddarno(e.target.value)
-    //             }}
-    //           />
-    // <div className='input-1'></div>
-    // <input type='text'
-    //             className='input-field'
-    //             placeholder='Enter Address'
-    //             value={address}
-    //             onChange={(e) => {
-    //               setAddress(e.target.value)
-    //             }}
-    //           />
-    // <div className='input-1'></div>
-    //           <select className='input-field'
-    //             value={jobcategory}
-    //             onChange={(e) => {
-    //               setJobcategory(e.target.value)
-    //             }}
-    //           >
-    //             <option>Select Category</option>
-    //             <option>House Maid</option>
-    //             <option>Baby Sitters</option>
-    //             <option>Elder Care</option>
-    //             <option>Cooks</option>
-    //             <option>Patient Caretakers</option>
-    //             <option>Nurse</option>
-
-    //           </select>
-    //           <div className='input-1'></div>
-    //          <div>
-    //          <input type='radio'
-    //             name='radio'
-    //             checked={gender === 'Male'}
-    //             value={gender}
-    //             onClick={() => {
-    //               setGender('Male');
-    //             }}
-    //           /> Male <span></span><span></span><span></span>
-
-    //           <input type='radio'
-    //             name='radio'
-    //             checked={gender === 'Female'}
-    //             value={gender}
-    //             onClick={() => {
-    //               setGender('Female');
-    //             }}
-    //           /> Female
-    //          </div>
-    //          <div className='input-1'></div>
-
-    //           <p> <button onClick={loadposttransaction} className='btn'>  Register </button></p>
-
-
-
-    //         </div>
-
-    //         <div className='all-card-container'>
-    //           {
-    //             job?.map((job, i) => {
-    //               const { _id, fullname, addarno, address, jobcategory, imageurl, gender } = job;
-
-    //               return (
-    //                 <div className='transaction-cards' key={i}>
-    //                   <p className='category-transaction'>Name:  {fullname} </p>
-    //                   <p>Addar No : {addarno} </p>
-
-    //                   <span>Job Category : {jobcategory} </span> 
-    //                   <span>Gender : {gender} </span>
-    //                   <hr />
-    //                   <p>Address : {address}</p>
-
-
-
-
-
-
-
-
-    //                   <span className='delete-text' onClick={() => {
-    //                     deleteTransition(_id);
-    //                   }}> Delete </span>
-
-    //                   <span className='edit-text' onClick={() => {
-
-    //                   }}> Edit </span>
-    //                 </div>
-    //               )
-    //             })
-    //           }
-    //         </div>
-    //       </div>
-    //     </div>
+    
   )
+}
+
+function convertToBase64(file) {
+  return new Promise((resolve, reject) => {
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file);
+      fileReader.onload = () => {
+          resolve(fileReader.result)
+      };
+      fileReader.onerror = (error) => {
+          reject(error)
+      }
+  })
 }
 
 export default JobHere

@@ -17,12 +17,22 @@ const loadServiceApi=async()=>{
 }
 useEffect(()=>{
   loadServiceApi();
+  loadjobdata()
 
 },[])
+
+// -------------job section-----------
+const [jobs,setJobs]=useState([])
+
+const loadjobdata=async()=>{
+  const response=await axios.get('/api/jobs')
+  setJobs(response?.data?.data)
+}
 
   return (
     <div>
       <Navbar/>
+      <div className='main-container'>
 <div className='services-section'>
 {
   services.map((service,i)=>{
@@ -32,9 +42,19 @@ useEffect(()=>{
   })
 }
 </div>
-
+<div className='heading'>
+         recently joined helper
+        </div>
 <div>
-  <JobCard/>
+
+  {
+    jobs.map((job,i)=>{
+      const {first_name, last_name,phoneno,email,image,address,adharno, gender,age,jobcategory,shift}=job
+      return <JobCard img={image} firstname={first_name} lastname={last_name} jobcategory={jobcategory} shift={shift} phone_no={phoneno} adhar_no={adharno} address={address} email={email} age={age} gender={gender}/>
+    })
+  }
+
+</div>
 </div>
     </div>
   )

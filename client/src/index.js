@@ -4,13 +4,14 @@ import Home from './view/Home/Home';
 import Services from './view/Services/Services';
 import Pricing from './view/Pricing/Pricing';
 import Security from './view/Security/Security';
-import JobHere from './view/JobHere/JobHere';
+
 import AboutUs from './view/AboutUs/AboutUs';
 import Login from './view/Login/Login';
 import SignUp from './view/SingUp/SignUp';
 import Uploading from './view/admin/Uploading';
 import PlacedService from './view/PlacedServices/PlacedService';
 import YourServices from './view/YourServices/YourServices';
+import JobHere from './view/JobHere/JobHere';
 
 
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
@@ -24,7 +25,7 @@ const router=createBrowserRouter([
         element:<Services/>
     },
     {
-        path:'pricing',
+        path:'/pricing',
         element:<Pricing/>
     },
     {

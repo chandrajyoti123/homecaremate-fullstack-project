@@ -6,6 +6,7 @@ import './YourServices.css'
 import close from './close.png'
 import star from './star.png'
 import stared from './stared.png'
+import Footer from '../../components/Footer/Footer'
 
 export default function YourServices() {
     const [user_id, setUser_id] = useState('')
@@ -169,7 +170,7 @@ console.log(user_id)
 
             <div onMouseMove={ismodel ? nothing : open_model}>
                 <Navbar />
-                <div>
+                <div className='your-servicec-con'>
 
                     {
                         orders.map((order, i) => {
@@ -221,7 +222,7 @@ console.log(user_id)
               
 
             </div>
-
+    <Footer/>
         </div>
     )
 }

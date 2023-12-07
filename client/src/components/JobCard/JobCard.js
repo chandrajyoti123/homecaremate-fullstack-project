@@ -1,12 +1,17 @@
 import React from 'react'
 import './JobCard.css'
 import user from './user.avif'
+import user_img from './user-img.png'
 export default function JobCard({img,firstname,lastname,jobcategory,shift,phone_no,email,adhar_no,address,age,gender}) {
     return (
         <div className='jobcard-container'>
-            <img src={img} className='job-can-img' />
+            <img src={img?img:user_img} className='job-can-img' />
             <div className='job-can-name'>{firstname} {lastname}</div>
-            <div className='job-can-post'>{jobcategory} </div>
+           
+
+           <div className='post-of-services'>
+            {jobcategory}
+           </div>
          
             
             <div className='job-can-field'>

@@ -21,12 +21,25 @@ margin: 10px auto;
     text-transform: capitalize;
     margin-top: 10px;
 }
-.job-can-post{
+
+.post-of-services{
+   
+    display: block;
+    width: 100%;
+    height: 30px;
     font-size: 25px;
     text-align: center;
     color: rgba(0, 0, 0,0.4);
     margin-bottom: 20px;
     text-transform: capitalize;
+}
+.job-can-post1{
+    font-size: 25px;
+    text-align: center;
+    color: rgba(0, 0, 0,0.4);
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    display: block;
 
 }
 .job-can-field{
@@ -34,7 +47,7 @@ margin: 10px auto;
     width: 100%;
     padding: 0 15%;
     font-size: 25px;
-    margin: 10px 0;
+    margin: 4px 0;
     
 }
 .field-key{

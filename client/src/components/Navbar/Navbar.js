@@ -68,10 +68,12 @@ export default function Navbar() {
 
   }
     return (
-        <>
+        <div className='z-index'>
             <div className='navbar'>
                 <div className='logo-section'>
-                    <img src={logo} className='logo' />
+                   <div className='logo'>
+                   home care mate
+                   </div>
                 </div>
                 <div className='list-section'>
                     <ul>
@@ -122,7 +124,7 @@ export default function Navbar() {
 
 
             </div>
-        </>
+        </div>
     )
 
 

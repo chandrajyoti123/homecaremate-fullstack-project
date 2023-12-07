@@ -95,6 +95,32 @@ function JobHere() {
 
   }
 
+  useEffect(()=>{
+    loadloginuser();
+    window.location.href = '/services'
+  },[])
+  console.log(user_id)
+
+  
+
+  // const loadposttransaction = async () => {
+
+  //   // if (!fullname) {
+  //   //   showToast('Fullname is required', 'alert', 6000);
+  //   // }
+  //   // if (!imageurl) {
+  //   //   showToast('Imageurl is required', 'alert', 6000);
+  //   // }
+  //   // if (!addarno) {
+  //   //   showToast('Addar no. is required', 'alert', 6000);
+  //   // }
+  //   // if (!address) {
+  //   //   showToast('Address is required', 'alert', 6000);
+  //   }
+
+
+
+
   // console.log(user_id)
 
   

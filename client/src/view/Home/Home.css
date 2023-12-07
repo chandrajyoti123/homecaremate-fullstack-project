@@ -1,0 +1,162 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+    
+}
+.heding-poster-container{
+    width: 100%;
+    height: 700px;
+    background-image:linear-gradient(45deg, rgba(0, 0, 0, 0.611),rgba(0, 0, 0, 0.315), rgba(0, 0, 0, 0.595) ), url(https://www.bookmymaids.com/wp-content/uploads/2023/09/maid-service-2.webp) ;
+    text-align: center;
+    background-position:center center;
+  background-size:cover;
+    /* background-size: 700px 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    font-size: 20px;
+}
+.pt-100{
+    padding-top: 100px;
+}
+.text-poster{
+    margin-top: -10px;
+}
+.heding-poster{
+    padding-bottom: 20px;
+    color: #0a6a91;
+    text-align: start;
+}
+
+.col-blue{
+    color: #0a6a91;
+}
+.col-black{
+    color: rgb(81, 80, 80);
+   
+}
+
+.home-poster{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 50px;
+    /* background-color: rgba(157, 157, 157, 0.169) */
+}
+
+.home-poster-text{
+    margin: 10px;
+    padding: 20px;
+    /* border: 1px solid black; */
+    width: 600px;
+}
+.para-text{
+    font-size: 20px;
+    color: rgb(99, 98, 98);
+    text-align: left;
+}
+.poster-img{
+    border-radius:  20px;
+    height: 500px;
+}
+.bg-orange{
+    
+    background-color:#ffe6e6 ;
+}
+.bg-white{
+    background-color: white;
+}
+.devlop-name{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+.job-card{
+display: inline-block;
+border: 1px solid black;
+padding: 20px;
+text-align: start;
+margin:30px 25px;
+box-shadow: 0 1px 20px 0 rgb(184, 184, 184) ;
+background-color: white;
+}
+.jobcard-container{
+    display: flex;
+   justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    /* background-color: rgba(157, 157, 157, 0.169); */
+    margin-bottom: 30px;
+}
+.col-light{
+  background-color: rgba(157, 157, 157, 0.169);
+  padding: 70px 10px; 
+}
+.img-container{
+    text-align: center;
+    padding: 10px;
+}
+.img-card{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+}
+.p-10{
+    padding: 10px;
+    padding-left: 0px;
+}
+.use-card{
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+    width: 350px;
+    background-color: white;
+}
+.whyuse-card{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+@media screen and  (max-width:768px) {
+    .image-main{
+        width: 100%;
+        height: 300px;
+        background-image:linear-gradient(45deg, #ffa5b22b, #ec13347a, #ffa5b22b), url(https://nomoredebts.org/wp-content/uploads/2020/08/tracking-your-spending_hero.jpg) ;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        flex-direction: column;
+        font-size: 15px;
+    }
+
+    .home-poster{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       padding: 10px;
+       
+    }
+    
+    .home-poster-text{
+        margin: 10px;
+        padding: 30px;
+     
+        width: 100%;
+    }
+    .poster-img{
+        /* border-radius:  100px 0; */
+        width: 350px;
+        margin-top: 30px;
+    }
+}

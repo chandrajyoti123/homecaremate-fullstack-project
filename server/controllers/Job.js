@@ -1,6 +1,7 @@
 import Job from "./../models/Job.js"
 
 const postApiJob = async (req, res) => {
+
     const {user, fullname, imageurl, address, addarno, jobcategory, gender, mobileno } = req.body;
 
     const job = new Job({
@@ -12,6 +13,12 @@ const postApiJob = async (req, res) => {
         jobcategory,
         gender,
         mobileno
+
+    const {user,first_name, last_name,phoneno,email,image,address,adharno, gender,age,jobcategory,shift,expecting_salary } = req.body;
+
+    const job = new Job({
+       user,first_name,last_name,phoneno,email,image,address,adharno,gender,age,jobcategory,shift,expecting_salary
+
     })
 
     try {
@@ -29,50 +36,60 @@ const postApiJob = async (req, res) => {
     }
 }
 
-const getApiJob = async (req, res) => {
-    const alltransaction = await Job.find();
-   return res.status(200).json({
-        success: true,
-        data: alltransaction,
-        message: "successfull User all Job fatched "
-    })
+
+const getapijob=async(req,res)=>{
+  const alljobs=await Job.find().populate("user")
+  return res.json({
+    success:true,
+    data:alljobs,
+    message:"all jobs fetched successfulyy"
+  })
+
 }
+// const getApiJob = async (req, res) => {
+//     const alljobs = await Job.find().populate("user");
+//    return res.status(200).json({
+//         success: true,
+//         data: alljobs,
+//         message: "all jobs data fetched successfully"
+//     })
+// }
 
-const getApiUserJob = async (req, res) => {
-    const { id} = req.params;
-   try{
-    const order1 = await Job.find({user:{ _id: id }}).populate("user")
+// const getApiUserJob = async (req, res) => {
+//     const { id} = req.params;
+//    try{
+//     const order1 = await Job.find({user:{ _id: id }}).populate("user")
   
-    res.json({
-      success:true,
-      data:order1,
-      message: "user Job fatch  successfully"
-    });
-   }
-   catch(e){
-    res.json({
-        success:false,
-        message: e.message
-      });
-   }
-  }
+//     res.json({
+//       success:true,
+//       data:order1,
+//       message: "user Job fatch  successfully"
+//     });
+//    }
+//    catch(e){
+//     res.json({
+//         success:false,
+//         message: e.message
+//       });
+//    }
+//   }
 
-const deleteApiJobById = async (req, res) => {
-    const { id } = req.params;
+// const deleteApiJobById = async (req, res) => {
+//     const { id } = req.params;
   
-    try {
-      await Job.deleteOne({ _id: id });
-      res.status(200).json({
-        success: true,
-        message: " deleted successfully",
-      });
-    } catch (err) {
-      res.status(500).json({
-        success: false,
-        message: err.message,
-      });
-    }
-  };
+//     try {
+//       await Job.deleteOne({ _id: id });
+//       res.status(200).json({
+//         success: true,
+//         message: " deleted successfully",
+//       });
+//     } catch (err) {
+//       res.status(500).json({
+//         success: false,
+//         message: err.message,
+//       });
+//     }
+//   };
 
 
-export {postApiJob, getApiJob, getApiUserJob, deleteApiJobById, }
+export {postApiJob, getapijob }

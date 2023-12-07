@@ -1,0 +1,48 @@
+.jobcard-container{
+    width: 400px;
+    height: auto;
+  
+    padding: 20px 0;
+    box-shadow:  0 0 10px 2px rgb(0, 0, 0,0.1);
+    
+}
+.job-can-img{
+    width: 200px;
+    height: 200px;
+display: block;
+margin: 10px auto;
+
+}
+.job-can-name{
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+.job-can-post{
+    font-size: 20px;
+    text-align: center;
+    color: rgba(0, 0, 0,0.4);
+    margin-bottom: 20px;
+
+}
+.job-can-field{
+    display: flex;
+    width: 100%;
+    padding: 0 5%;
+    font-size: 25px;
+    margin: 10px 0;
+    
+}
+.field-key{
+    width: 30%;
+  
+    text-transform: capitalize;
+}
+.field-value{
+    width: 70%;
+  
+    word-wrap: break-word;
+    
+}

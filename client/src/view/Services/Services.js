@@ -4,6 +4,7 @@ import ServiceCard from '../../components/ServiceCard/ServiceCard'
 import axios from "axios"
 import './Services.css'
 import JobCard from '../../components/JobCard/JobCard'
+import Footer from '../../components/Footer/Footer'
 
 
 
@@ -70,6 +71,7 @@ export default function Services() {
 
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }

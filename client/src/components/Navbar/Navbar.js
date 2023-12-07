@@ -61,6 +61,7 @@ export default function Navbar() {
     const logout=()=>{
         localStorage.removeItem('loginuser')
         localStorage.removeItem("userimg")
+        window.location.href='/login'
         
     }
   const something=()=>{

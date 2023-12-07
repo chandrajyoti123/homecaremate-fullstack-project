@@ -1,6 +1,4 @@
 
-
-
 import React from 'react'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -13,7 +11,6 @@ import user_img from './user-img2.png'
 
 function JobHere() {
 
-  const [user, setUser] = useState("");
 
   const [firstname, setFirstname] = useState('')
   const [lastname, setLastname] = useState('')
@@ -55,9 +52,21 @@ function JobHere() {
 
   const loadloginuser = () => {
     const response = JSON.parse(localStorage.getItem('loginuser'))
-    setUser_id(response._id)
+    if(response){
+      setUser_id(response._id)
+    }
   }
+
+  useEffect(()=>{
+    loadloginuser();
+  },[])
   const postapljobfun=async()=>{
+
+    if(!user_id){
+      alert("your have to been login first")
+      window.location.href='/login'
+
+  }
     const response=await axios.post('/api/jobs',{
       user:user_id,
       first_name:firstname,
@@ -85,6 +94,7 @@ function JobHere() {
     )
 
   }
+
   useEffect(()=>{
     loadloginuser();
     window.location.href = '/services'
@@ -110,70 +120,12 @@ function JobHere() {
 
 
 
-  //   const data = {
-  //     user,
-  //     fullname,
-  //     imageurl,
-  //     // addarno,
-  //     address,
-  //     jobcategory,
-  //     gender
-  //   }
 
-  //   const response = await axios.post("/api/job", data)
+  // console.log(user_id)
+
+  
 
 
-  //   if (response?.data?.success) {
-  //     window.location.href = "/jobhere";
-  //     showToast(response?.data?.message, 'success', 3000)
-
-  //   }
-  //   else {
-  //     // alert(response?.data?.message)
-  //     setFullname('')
-  //     // setImageurl('')
-  //     // setAddarno('')
-  //     setAddress('')
-
-  //   }
-
-
-
-  // }
-  // const localStoragedata = JSON.parse(localStorage.getItem("loginuser") || "{}");
-  // // console.log(localStoragedata);
-
-  // const loadData = async () => {
-  //   const response = await axios.get(`/api/job/user/${localStoragedata?._id}`)
-  //   setJob(response?.data?.data)
-  //   // console.log(response?.data?.data)
-  //   console.log(localStoragedata?._id)
-  //   console.log(response.data.data)
-  //   setUser(localStoragedata?._id)
-  // }
-
-
-
-
-  // const deleteTransition = async (_id) => {
-
-
-  //   const response = await axios.delete(`/api/job/${_id}`);
-  //   // console.log("id=", _id)
-  //   if (response?.data?.message) {
-  //     loadData();
-
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   loadData()
-
-  //   const storageUser = JSON.parse(localStorage.getItem("loginuser") || "{}");
-  //   console.log(storageUser);
-
-
-  // }, [])
 
   return (
     <>
@@ -385,4 +337,3 @@ function convertToBase64(file) {
 }
 
 export default JobHere
-

@@ -85,6 +85,11 @@ export default function PlacedService() {
     
 
     const placedservice=async()=>{
+        if(!userid){
+            alert("your have to been login first")
+            window.location.href='/login'
+
+        }
         const response=await axios.post('/api/serviceorders',{
             shift:shift, country:country, state:state, city:city, pincode:pincode, userid:userid , serviceid:_id , charges:fixedsal
 

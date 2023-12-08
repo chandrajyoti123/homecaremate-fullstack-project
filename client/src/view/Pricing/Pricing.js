@@ -15,8 +15,10 @@ export default function Pricing() {
 
    const loadReviewApi= async()=>{
     const response=await axios.get('/api/reviews')
+   if(response?.data?.data){
     SetReviews(response?.data?.data)
-    console.log(response?.data?.data)
+    // console.log(response?.data?.data?.createdAt)
+   }
                                  }
    useEffect(()=>{
     loadReviewApi();
@@ -34,8 +36,8 @@ export default function Pricing() {
       
       {
         reviews.map((review,i)=>{
-          const { message,image,star,user}=review
-          return <ReviewCard message={message} first_name={user.first_name} last_name={user.last_name} star={star} user_img={image}  />
+          const { message,image,star,user,createdAt}=review
+          return <ReviewCard message={message} first_name={user.first_name} last_name={user.last_name} star={star} user_img={image} createdat={createdAt} />
           
 
            })

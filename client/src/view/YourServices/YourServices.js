@@ -192,7 +192,7 @@ console.log(user_id)
 
             <div className={`model-window ${modelnone} `}>
                 
-                <div className='experience'>share your experience</div>
+                <div className='experience'>How was your experience</div>
                 <div className='rate-us-con'>
                 <div className='rate-us'>Rate Us</div>
                 <div className='star-container'>

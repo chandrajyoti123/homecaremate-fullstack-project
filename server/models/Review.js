@@ -17,6 +17,9 @@ const reviewschema=new Schema({
     type:"Number",
    
     }
+},{
+    timestamps:true
+    
 })
 const Review=model("Review",reviewschema)
 export default Review;

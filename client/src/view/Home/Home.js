@@ -110,10 +110,11 @@ export default function Home() {
           window.location.href = '/services'
          }}>Show more</button>
      </div>
-  </div> */}
-<Footer/>
+     <Footer/>
+  </div> 
 
-    </div>
+
+   
   )
 }
 

@@ -5,6 +5,7 @@
     padding: 20px 0;
     box-shadow:  0 0 10px 2px rgb(0, 0, 0,0.5);
     margin: 20px;
+    background-color: #fff;
     
 }
 .job-can-img{
@@ -20,6 +21,8 @@ margin: 10px auto;
     font-weight: bold;
     text-transform: capitalize;
     margin-top: 10px;
+    color: rgb(255, 199, 39);
+
 }
 
 .post-of-services{

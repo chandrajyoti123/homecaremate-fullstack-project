@@ -32,6 +32,8 @@ const serviceschema=new Schema({
 
 
     
+},{
+    timestamps:true
 })
 const Service=model("Service",serviceschema)
 export default Service;

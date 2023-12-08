@@ -1,13 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './ReviewCard.css'
 import stare from './star.png'
 import stared from './stared.png'
-import { useState } from 'react'
+import { useState} from 'react'
 import user_img2 from './user-img.png'
 
 
-export default function ReviewCard({first_name,last_name,user_img,message,star}) {
-    // const [starcounts,setStarcounts]=useState(star)
+export default function ReviewCard({first_name,last_name,user_img,message,star,createdat}) {
+    const [creatat,setCreatat]=useState('')
+    const loadcreatedat=()=>{
+      setCreatat(createdat)
+    }
+    useEffect(()=>{
+      loadcreatedat()
+    
+
+    },[])
+    const date = new Date(creatat).toLocaleDateString();
+                const time = new Date(creatat).toLocaleTimeString()
+  
   
   return (
     <div className='review-card'>
@@ -18,7 +29,7 @@ export default function ReviewCard({first_name,last_name,user_img,message,star})
                   {first_name} {last_name}
                 </div>
                 <div className='review-time'>
-             27 Dec.2023
+             {createdat? date:''} {createdat? time:''}
                 </div>
              </div>
 

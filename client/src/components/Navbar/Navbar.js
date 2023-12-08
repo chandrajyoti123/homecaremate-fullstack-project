@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Navbar.css'
-import logo from './psedo-logo.png'
+import logo from './actual-logo.png'
 import user from './user-img.png'
 import user2 from './user-img2.png'
 import smile from './smile.png'
@@ -71,15 +71,13 @@ export default function Navbar() {
         <div className='z-index'>
             <div className='navbar'>
                 <div className='logo-section'>
-                   <div className='logo'>
-                   home care mate
-                   </div>
+                  <img src={logo} className='logo'/>
                 </div>
                 <div className='list-section'>
                     <ul>
                         <li><Link to={'/'} className='nav-link'>home</Link></li>
                         <li><Link to={'/services'} className='nav-link'>services</Link></li>
-                        <li><Link to={'/pricing'} className='nav-link'>pricing</Link></li>
+                        <li><Link to={'/pricing'} className='nav-link'>review</Link></li>
                         <li><Link to={'/security'} className='nav-link'>security</Link></li>
                         <li><Link to={'/aboutus'} className='nav-link'>about us</Link></li>
                         <li><Link to={'/jobhere'} className='nav-link'>job</Link></li>

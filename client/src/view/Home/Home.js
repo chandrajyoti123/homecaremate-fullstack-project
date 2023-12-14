@@ -42,6 +42,7 @@ export default function Home() {
           <p className='para-text'>Welcome to HomeCareMate, your trusted online platform connecting households with reliable domestic help. Just like Kamvali, we understand the importance of finding skilled and trustworthy assistance for your home. Helper4U simplifies the hiring process, offering a seamless experience for both employers and job seekers. Explore our comprehensive database of verified professionals, whether you're seeking domestic helpers, caregivers, or other household services. With Helper4U, discover the right match for your needs, ensuring a secure and efficient solution for all your domestic staffing requirements.</p>
         </div>
       </div>
+      
       <div className='col-light'>
       <h1 className='img-container col-blue'> Why Use HomeCareMate </h1>
       <div className='whyuse-card'>

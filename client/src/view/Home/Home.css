@@ -115,9 +115,9 @@ background-color: white;
   .scroll{
     display: flex;
     overflow-X: scroll;
-    padding:20px 100px ;
+    /* padding:20px 100px ; */
     justify-content: center; 
-    /* margin:20px 40px; */
+    margin: 0px;
    
 }
 .scroll::-webkit-scrollbar {

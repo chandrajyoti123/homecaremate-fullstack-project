@@ -7,7 +7,7 @@ function AboutCard({name , hedline, description, image, github, linkedin, peerli
   return (
     <div className='job-card icon-container'>
     <div className='img-container'>
-      <img className='img-card' src={image} />
+    <img className='img-card' src={image} />
     </div>
     <h2> {name} </h2>
     <p>( {hedline} )</p> <br/>
@@ -17,7 +17,7 @@ function AboutCard({name , hedline, description, image, github, linkedin, peerli
     <p className='p-10'>< hr /></p>
     <div className='icon-container'>
     <a href={github} target='blank' className='prof-account cole-bl' > <FontAwesomeIcon icon={faGithub} /> </a>
-    <a href={github} target='blank' className='prof-account' > <FontAwesomeIcon icon={faLinkedin} /> </a>
+    <a href={linkedin} target='blank' className='prof-account' > <FontAwesomeIcon icon={faLinkedin} /> </a>
     
    
     

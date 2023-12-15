@@ -4,3 +4,32 @@
 .color-light{
     background-color: rgb(255, 254, 254);
 }
+.prof-account{
+    text-decoration: none;
+    font-size: 30px;
+    padding:20px 5px;
+    color: blue;
+}
+.prof-account:hover{
+    /* box-shadow: 0 2px 10px 0 black;
+    border-radius: 50%; */
+    font-size: 32px;
+}
+.cole-bl{
+    color: black;
+}
+.icon-container{
+    text-align: center;
+    padding: 10px ;
+    width: 300px;
+}
+
+.text-center{
+    text-align: center;
+}
+.devloper-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

@@ -25,11 +25,13 @@ export default function Home() {
     <div>
       <Navbar />
       <div className='heding-poster-container'>
-        <h3>Maid, Cook, Baby Sitters, Patient Care and Elder Care Services in Your City.</h3>
+        <h3>Maid, Cook, Baby Sitters, Patient Care and</h3>
+        <h3> Elder Care Services in Your City.</h3>
         <h1>_______</h1>
         <h1 className='pt-100'> </h1>
-        <h1 className=' '> HomeCareMate </h1>
-        <p>Helper4U offers professional domestic services such as maids, cooks, babysitters, patient care, and elder care in Your City.</p>
+        <h1 className='col-red '> HomeCareMate </h1>
+        <p className=' '>Helper4U offers professional domestic services such as maids, </p>
+        <p>cooks, babysitters, patient care, and elder care in Your City.</p>
       </div>
 
       <div className='home-poster'>
@@ -107,7 +109,7 @@ export default function Home() {
 
       </div>
      <div className='img-container'>
-     <button type='button' className='btn btnjob mar-center' onClick={ ()=>{
+     <button type='button' className='btn btnjob mar-center btn-col' onClick={ ()=>{
           window.location.href = '/services'
          }}>Show more</button>
      </div>

@@ -91,14 +91,15 @@
 .btn{
     padding: 10px 15px;
     font-size: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
-    background-color: lightgreen;
+    background-color: rgb(255, 56, 6);
+    color: white;
     min-width: 200px;
     cursor: pointer;
 }
 .btn:hover{
    
-    background-color: rgb(117, 246, 117);
+    background-color: rgb(69, 90, 100);
   
 }

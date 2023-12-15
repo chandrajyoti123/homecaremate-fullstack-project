@@ -1,8 +1,9 @@
 import React from 'react';
 import './AboutUs.css';
 import Navbar from '../../components/Navbar/Navbar';
+import AboutCard from '../../components/AboutCard/AboutCard';
 
-export default function AboutUs() {
+export default function AboutUs({AbhijeetKokat}) {
   return (
     <div>
       <Navbar/>
@@ -22,6 +23,16 @@ export default function AboutUs() {
           </p>
         </div>
       </div>
+
+<br/>
+  <h1 className='heding-poster text-center'>Our Team</h1>
+  <div className='devloper-container'>
+<AboutCard name={'Abhijeet kokat '} description={'i am leaning BE CS Branch'} hedline={'MERN Stack Devloper'}/>
+
+<AboutCard name={'Abhijeet kokat '} description={'I doing BE cs branch from HSBPVTS COE, KASHTI'} hedline={'MERN Stack Devloper'}/>
+</div>
+
+
     </div>
   )
 }

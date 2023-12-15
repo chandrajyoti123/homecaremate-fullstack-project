@@ -1,8 +1,11 @@
 import React from 'react';
 import './AboutUs.css';
 import Navbar from '../../components/Navbar/Navbar';
+import AboutCard from '../../components/AboutCard/AboutCard';
+import chandani from './chandani.jpg';
+import abhi from './ak.jpg';
 
-export default function AboutUs() {
+export default function AboutUs({AbhijeetKokat}) {
   return (
     <div>
       <Navbar/>
@@ -22,6 +25,16 @@ export default function AboutUs() {
           </p>
         </div>
       </div>
+
+<br/>
+  <h1 className='heding-poster text-center'>Our Team</h1>
+  <div className='devloper-container'>
+<AboutCard name={'Chandrajyoti Adil '} description={'I doing BE in cs branch from RTMOU, Nagpur'} hedline={'MERN Stack Devloper'} image={chandani} github={'https://github.com/chandrajyoti123/'} linkedin={'https://www.linkedin.com/in/chandrajyoti123/'}/>
+
+<AboutCard name={'Abhijeet kokat '} description={'I doing BE in cs branch from HSBPVTS COE, KASHTI'} hedline={'MERN Stack Devloper'} image={abhi} linkedin={'https://www.linkedin.com/in/abhijeetkokat007/'} github={'https://github.com/Abhijeetkokat007/'}/>
+</div>
+
+
     </div>
   )
 }

@@ -25,11 +25,13 @@ export default function Home() {
     <div>
       <Navbar />
       <div className='heding-poster-container'>
-        <h3>Maid, Cook, Baby Sitters, Patient Care and Elder Care Services in Your City.</h3>
+        <h3>Maid, Cook, Baby Sitters, Patient Care and</h3>
+        <h3> Elder Care Services in Your City.</h3>
         <h1>_______</h1>
         <h1 className='pt-100'> </h1>
-        <h1 className=' '> HomeCareMate </h1>
-        <p>Helper4U offers professional domestic services such as maids, cooks, babysitters, patient care, and elder care in Your City.</p>
+        <h1 className='col-red '> HomeCareMate </h1>
+        <p className=' '>Helper4U offers professional domestic services such as maids, </p>
+        <p>cooks, babysitters, patient care, and elder care in Your City.</p>
       </div>
 
       <div className='home-poster'>
@@ -48,32 +50,32 @@ export default function Home() {
       <div className='whyuse-card'>
         
         <div className='use-card'>
-          <h3 className='p-10 '> Verified Professionals </h3>
+          <h3 className='p-10 col-black'> Verified Professionals </h3>
           <p className='col-black'>HomeCareMate takes the hassle out of hiring by providing a platform with verified and background-checked domestic helpers. Trust and reliability are at the core of our service.</p>
         </div>
 
         <div className='use-card'>
-          <h3 className='p-10 '> Comprehensive Database </h3>
-          <p className='col-black'>Explore a diverse and extensive database of skilled professionals, including domestic helpers, caregivers, and other household service providers. Helper4U offers a wide range of options to cater to your specific needs </p>
+          <h3 className='p-10 col-black'> Comprehensive Database </h3>
+          <p className='col-black '>Explore a diverse and extensive database of skilled professionals, including domestic helpers, caregivers, and other household service providers. Helper4U offers a wide range of options to cater to your specific needs </p>
         </div>
 
         <div className='use-card'>
-          <h3 className='p-10 '> Simplified Hiring Process </h3>
+          <h3 className='p-10 col-black'> Simplified Hiring Process </h3>
           <p className='col-black'>Our user-friendly platform streamlines the hiring process, making it easy for both employers and job seekers. Say goodbye to the complexities of finding the right domestic help </p>
         </div>
 
         <div className='use-card'>
-          <h3 className='p-10 '> Secure and Transparent </h3>
+          <h3 className='p-10 col-black'> Secure and Transparent </h3>
           <p className='col-black'> We prioritize your safety and security. Helper4U ensures a transparent hiring process, with clear information on candidates and a commitment to protecting your privacy.</p>
         </div>
 
         <div className='use-card'>
-          <h3 className='p-10 '> Efficient Matchmaking </h3>
+          <h3 className='p-10 col-black'> Efficient Matchmaking </h3>
           <p className='col-black'>Save time and effort with our efficient matchmaking system. Helper4U connects you with professionals who align with your requirements, ensuring a successful and satisfying hiring experience. </p>
         </div>
 
         <div className='use-card'>
-          <h3 className='p-10 '> Supportive Community </h3>
+          <h3 className='p-10 col-black'> Supportive Community </h3>
           <p className='col-black'>Join a supportive community of employers and job seekers. Helper4U fosters a positive environment, encouraging open communication and collaboration. </p>
         </div>
         </div>
@@ -107,7 +109,7 @@ export default function Home() {
 
       </div>
      <div className='img-container'>
-     <button type='button' className='btn btnjob mar-center' onClick={ ()=>{
+     <button type='button' className='btn btnjob mar-center btn-col' onClick={ ()=>{
           window.location.href = '/services'
          }}>Show more</button>
      </div>

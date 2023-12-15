@@ -73,8 +73,8 @@
     width: 100%;
 }
 .input-label{
-    font-size: 30px;
-    color: rgb(104, 229, 104);
+    font-size: 25px;
+    color: rgb(255, 56, 6);
     font-weight: 700;
 
     
@@ -82,23 +82,25 @@
 .input-field{
     width: 95%;
     height: 50px;
-    font-size: 20px;
+    font-size: 17px;
     padding-left: 10px;
     margin-bottom: 3px; 
     border-radius: 5px;
+    /* border: none; */
 }
 
 .btn{
     padding: 10px 15px;
     font-size: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
-    background-color: lightgreen;
+    background-color: rgb(255, 56, 6);
+    color: white;
     min-width: 200px;
     cursor: pointer;
 }
 .btn:hover{
    
-    background-color: rgb(117, 246, 117);
+    background-color: rgb(69, 90, 100);
   
 }

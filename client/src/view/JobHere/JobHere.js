@@ -176,6 +176,7 @@ export default function JobHere() {
           
         <label htmlFor="job-image-upload" className='uploadlabel' >
            <img src={image?image:user_img} className='  jobuser-img'   /> 
+          
 
           </label>
           <input

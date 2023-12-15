@@ -6,7 +6,7 @@
 .heding-poster-container{
     width: 100%;
     height: 700px;
-    background-image:linear-gradient(45deg, rgba(0, 0, 0, 0.611),rgba(0, 0, 0, 0.315), rgba(0, 0, 0, 0.595) ), url(https://www.bookmymaids.com/wp-content/uploads/2023/09/maid-service-2.webp) ;
+    background-image:linear-gradient(45deg, rgba(0, 0, 0, 0.611),rgba(11, 11, 11, 0.533), rgba(0, 0, 0, 0.595) ), url(https://www.bookmymaids.com/wp-content/uploads/2023/09/maid-service-2.webp) ;
     text-align: center;
     background-position:center center;
   background-size:cover;
@@ -17,6 +17,9 @@
     color: white;
     flex-direction: column;
     font-size: 20px;
+}
+.col-black{
+    color: black;
 }
 .pt-100{
     padding-top: 100px;
@@ -36,6 +39,9 @@
 .col-black{
     color: rgb(81, 80, 80);
    
+}
+.col-red{
+    color:  rgb(255, 56, 6);
 }
 
 .home-poster{
@@ -60,8 +66,9 @@
     text-align: left;
 }
 .poster-img{
-    border-radius:  20px;
+    border-radius:  0px;
     height: 500px;
+    border-bottom: 2px solid black;
     
 }
 .bg-orange{
@@ -80,12 +87,15 @@
 }
 .job-card{
 display: inline-block;
-border: 1px solid black;
+/* border: 1px solid black; */
 padding: 20px;
 text-align: start;
 margin:30px 25px;
-box-shadow: 0 1px 20px 0 rgb(184, 184, 184) ;
+/* box-shadow: 0 1px 20px 0 rgb(184, 184, 184) ; */
 background-color: white;
+}
+.job-card:hover{
+    box-shadow: 0 1px 20px 0 rgb(184, 184, 184) ;   
 }
 .jobcard-container{
     display: flex;
@@ -104,10 +114,9 @@ background-color: white;
     display: flex;
     overflow-X: scroll;
     padding:20px 100px ;
-   
     justify-content: center; 
-    margin:20px 40px;
-
+    /* margin:20px 40px; */
+   
 }
 .scroll::-webkit-scrollbar {
     display: none;
@@ -131,16 +140,22 @@ background-color: white;
     padding-left: 0px;
 }
 .use-card{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 20px;
     margin: 20px;
     width: 350px;
     background-color: white;
+    cursor: pointer;
 }
+.use-card:hover{
+box-shadow: 0 2px 10px 0 rgb(164, 164, 164);
+}
+
 .whyuse-card{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    
 }
 .mar-center{
     /* display: block;
@@ -161,6 +176,8 @@ background-color: white;
         flex-direction: column;
         font-size: 15px;
     }
+
+    
 
     .home-poster{
        display: flex;

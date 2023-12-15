@@ -46,10 +46,19 @@ padding-left: 25px;
 }
  .footer-link{
     text-decoration: none;
-    color: black;
+    /* color: black; */
+    color: rgb(206, 204, 204);
     
 
  }
+ .footer-link:hover{
+    color: rgb(255, 199, 39);
+ }
+ .col-light{
+    color: rgb(206, 204, 204);
+    background-color: transparent;
+ }
+ 
 
 
 .footer4{
@@ -85,6 +94,9 @@ padding-left: 25px;
     position: absolute;
     top: 206px;
     left: -1px;
+}
+.col-yello{
+    color: rgb(255, 199, 39);
 }
 
 

@@ -18,6 +18,9 @@
     flex-direction: column;
     font-size: 20px;
 }
+.col-black{
+    color: black;
+}
 .pt-100{
     padding-top: 100px;
 }
@@ -38,7 +41,7 @@
    
 }
 .col-red{
-    color:  rgb(255, 56, 6);;
+    color:  rgb(255, 56, 6);
 }
 
 .home-poster{

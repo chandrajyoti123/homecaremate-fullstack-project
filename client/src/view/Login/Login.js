@@ -31,7 +31,7 @@ export default function Login() {
 
   return (
     <>
-    <Navbar/>
+    {/* <Navbar/> */}
     <div className='login-container'>
       <div className='login-child1'>
 

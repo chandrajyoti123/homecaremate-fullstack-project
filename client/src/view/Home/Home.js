@@ -13,13 +13,40 @@ export default function Home() {
     const responce = await axios.get("/api/jobs")
     // const response = await axios.get('/api/jobs')
     setCard(responce?.data?.data)
-    console.log(responce?.data?.data)
+    // console.log(responce?.data?.data)
 
   }
+   
+  const [signupdata,setSingupdata]=useState('')
+  const [logindata,SetLogindata]=useState('')
 
+  const loaduserdatafromlocal=()=>{
+    setSingupdata(JSON.parse(localStorage.getItem('signupuser')))
+    SetLogindata(JSON.parse(localStorage.getItem('loginuser')))
+  }
+  
+  // useEffect(()=>{
+    
+  //   return;
+  // },[signupdata])
+  console.log(signupdata)
   useEffect(() => {
     loadData()
+    // loaduserdatafromlocal();
+    if(!(JSON.parse(localStorage.getItem('signupuser')))){
+      window.location.href='/singup'
+    
+    }
+    if(!(JSON.parse(localStorage.getItem('loginuser')))){
+      window.location.href='/login'
+    }
+  
+
+     
+  
   }, [])
+  // console.log(signup)
+  // console.log(login)
 
   return (
     <div>

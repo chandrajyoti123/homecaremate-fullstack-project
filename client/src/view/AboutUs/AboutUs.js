@@ -14,7 +14,7 @@ export default function AboutUs({AbhijeetKokat}) {
           <img className='poster-img' src='https://kaamwalibais.com/assets/about-us-maid.jpg' alt='img' />
         </div>
         <div className='home-poster-text'>
-          <h1 className='heding-poster'>Who are we?</h1>
+          <h1 className='heading'>Who are we?</h1>
           <h3> </h3>
           <p className='para-text font-size'>
           HomeCareMate, a division of Kaamwalibais, is your ultimate destination for comprehensive home care services , India. With a rich legacy of over news in the domestic assistance industry, HomeCareMate specializes in providing a wide array of services, including 24/7 maid services, domestic help, housemaids, cooks, caretakers, ayahs, peons, nurses, ward boys, babysitters, and elderly care.
@@ -27,7 +27,7 @@ export default function AboutUs({AbhijeetKokat}) {
       </div>
 
 <br/>
-  <h1 className='heding-poster text-center'>Our Team</h1>
+  <h1 className='heading text-center'>Our Team</h1>
   <div className='devloper-container'>
 <AboutCard name={'Chandrajyoti Adil '} description={'I doing BE in cs branch from RTMOU, Nagpur'} hedline={'MERN Stack Devloper'} image={chandani} github={'https://github.com/chandrajyoti123/'} linkedin={'https://www.linkedin.com/in/chandrajyoti123/'}/>
 

@@ -47,12 +47,12 @@ padding-left: 25px;
  .footer-link{
     text-decoration: none;
     /* color: black; */
-    color: rgb(206, 204, 204);
+    color: #cecccc;
     
 
  }
  .footer-link:hover{
-    color: rgb(255, 199, 39);
+    color: rgb(255, 56, 6);
  }
  .col-light{
     color: rgb(206, 204, 204);

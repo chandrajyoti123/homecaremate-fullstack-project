@@ -1,5 +1,5 @@
 .font-size{
-    font-size: 17px;
+    font-size: 20px;
 }
 .color-light{
     background-color: rgb(255, 254, 254);
@@ -25,7 +25,7 @@
 }
 
 .text-center{
-    text-align: center;
+    text-align: center !important;
 }
 .devloper-container{
     display: flex;

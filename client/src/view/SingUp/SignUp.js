@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './SignUp.css';
 import { Link } from 'react-router-dom';
 import signupimg from './../../images/Mobile-login.svg'
@@ -13,6 +13,13 @@ export default function SignUp() {
   const [password2, setPassword2] = useState('')
   // const [address, setAddress] = useState('')
   const [phoneno, setPhoneno] = useState('')
+
+  const [eight,setEight]=useState('')
+  useEffect(()=>{
+    setEight(password1.length)
+  
+},[password1])
+
 
   const singupfun = async () => {
     if (!firstname) {
@@ -44,6 +51,17 @@ export default function SignUp() {
       return
 
     }
+   
+    if(!(regEx.test(email))){
+      alert('please enter valid email')
+      return
+
+    }
+    if(eight<8){
+      alert("password should at least 8 character")
+      return
+
+    }
     
 
     
@@ -71,6 +89,13 @@ export default function SignUp() {
 
 
   }
+
+
+  const regEx = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
+
+
+
+  
 
   return (
     <>

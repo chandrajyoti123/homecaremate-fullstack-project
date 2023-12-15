@@ -1,6 +1,6 @@
 .model-window{
-    width: 500px;
-    height:450px;
+    width: 600px;
+    height:470px;
     background-color: white;
     position: absolute;
     top: 50%;
@@ -8,6 +8,7 @@
     transform: translate(-50%,-50%);
     z-index: 10000;
     padding: 30px;
+    
     
 
 }
@@ -28,6 +29,7 @@
 .rate-us{
     font-size: 30px;
     font-weight: 700;
+    color: rgb(255, 56, 6);
 }
 .model-wrapper{
     position:fixed ;
@@ -36,6 +38,7 @@
     bottom: 0;
     top: 0;
     background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 
 }
 .review-input{
@@ -46,10 +49,16 @@
 
 }
 .experience{
-    font-size: 45px;
+  
     font-weight: bold;
-    text-align: center;
+    text-align: start;
     margin-top: 20px;
+    font-size: 45px;
+ 
+  color: #0a6a91;
+  text-transform: capitalize;
+  /* margin: 15px 0;
+  font-weight: bold; */
 
 }
 .star-container{

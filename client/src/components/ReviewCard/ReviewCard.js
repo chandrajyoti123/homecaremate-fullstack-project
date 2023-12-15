@@ -7,17 +7,32 @@ import user_img2 from './user-img.png'
 
 
 export default function ReviewCard({first_name,last_name,user_img,message,star,createdat}) {
-    const [creatat,setCreatat]=useState('')
-    const loadcreatedat=()=>{
-      setCreatat(createdat)
-    }
-    useEffect(()=>{
-      loadcreatedat()
+  const dateObject = new Date(createdat);
+   
+  const date = dateObject.getDate();
+  
+    const [months,setMonths]=useState([
+      "Jan",'Feb',"Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"
+  
+    ])
+
+    const month = dateObject.getMonth();
+    const year = dateObject.getFullYear();
+
+
+  
+   
+    
+   
+    
+   
     
 
-    },[])
-    const date = new Date(creatat).toLocaleDateString();
-                const time = new Date(creatat).toLocaleTimeString()
+
+
+
+
+
   
   
   return (
@@ -29,7 +44,7 @@ export default function ReviewCard({first_name,last_name,user_img,message,star,c
                   {first_name} {last_name}
                 </div>
                 <div className='review-time'>
-             {createdat? date:''} {createdat? time:''}
+             {/* {createdat? date:''} {createdat? time:''} */}{date} {months[month]} {year}
                 </div>
              </div>
 

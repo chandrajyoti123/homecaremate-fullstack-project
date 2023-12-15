@@ -1,8 +1,8 @@
 import React from 'react'
 import './Footer.css'
 import { Link } from 'react-router-dom'
-import phone from './phone.png'
-import pin from './pin.png'
+import phone from './phone1.png'
+import pin from './pin2.png'
 
 export default function Footer() {
   return (

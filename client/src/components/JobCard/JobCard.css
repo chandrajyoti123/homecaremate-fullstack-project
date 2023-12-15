@@ -3,11 +3,18 @@
     height: auto;
   
     padding: 20px 0;
-    box-shadow:  0 0 10px 2px rgb(0, 0, 0,0.5);
+    box-shadow:  0 0 10px 3px #f4e1e1;
     margin: 20px;
     background-color: #fff;
+    transition: 0.5s;
     
 }
+/* .jobcard-container:hover{
+  
+    box-shadow:  0 0 15px 5px #f4e1e1;
+  
+    
+} */
 .job-can-img{
     width: 200px;
     height: 200px;

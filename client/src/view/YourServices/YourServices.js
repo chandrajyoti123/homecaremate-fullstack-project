@@ -143,6 +143,14 @@ const [starcounts,setStarcounts]=useState(0)
  const closed_model = async() => {
 
    try{
+   if(!starcounts){
+    alert("please rete us")
+    return
+   }
+   if(!message){
+    alert("please write a message")
+    return
+   }
     const response= await axios.post('/api/reviews',{
         user:user_id,
         image:userimg,
@@ -218,7 +226,7 @@ console.log(user_id)
   {/* <img className='cross-img' src={close}
                  onClick={closed_model}
                  /> */}
-                <button type='button' className='btn review-btn' onClick={closed_model}>Done</button>
+                <button type='button' className='btn review-btn' onClick={closed_model}>submit</button>
               
 
             </div>

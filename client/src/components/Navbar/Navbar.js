@@ -113,7 +113,7 @@ export default function Navbar() {
                 </div>
                 <div className='your-profile'>Your profile</div>
                 <ul>
-                  <li><Link to={'/yourservices'} className='nav-link white'> your services</Link></li>
+                  <li><Link to={'/yourservices'} className='nav-link '> your services</Link></li>
                    <li>setting</li>  
                    <li>   tools</li>
                 </ul>

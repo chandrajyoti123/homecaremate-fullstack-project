@@ -33,6 +33,8 @@ export default function Home() {
         <p className=' '>Helper4U offers professional domestic services such as maids, </p>
         <p>cooks, babysitters, patient care, and elder care in Your City.</p>
       </div>
+    <div className='main-container'>
+   
 
       <div className='home-poster'>
         <div >
@@ -80,7 +82,7 @@ export default function Home() {
         </div>
         </div>
       </div>
-     <h1 className='img-container'>Our Services</h1>
+     <h1 className='img-container'>Working Servents</h1>
       <div className='scroll'>
         {
           card.map((card, i) => {
@@ -113,6 +115,8 @@ export default function Home() {
           window.location.href = '/services'
          }}>Show more</button>
      </div>
+
+    </div>
      <Footer/>
   </div> 
 

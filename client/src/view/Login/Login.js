@@ -8,12 +8,12 @@ export default function Login() {
   const [password,setPassword]=useState("")
  
   const loginfun=async()=>{
-    // if(!email){
-    //   alert("password is requied")
-    // }
-    // if(!password){
-    //   alert('email is required')
-    // }
+    
+    if(!(regEx.test(email))){
+      alert('please enter valid email')
+      return
+
+    }
     const response=await axios.post('/api/login',{email:email, password:password})
     if(response?.data?.data){
       localStorage.setItem("loginuser",JSON.stringify(response.data.data))
@@ -25,7 +25,7 @@ export default function Login() {
 
   }
 
-
+  const regEx = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
 
 
 

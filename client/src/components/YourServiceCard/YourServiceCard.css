@@ -1,10 +1,10 @@
 .your-service-card{
     width: 78%;
     height: 400px;
-
+   background-color: #fff;
     display: flex;
     margin: 20px auto;
-    box-shadow: 0 0 10px 2px rgba(0, 0, 0,0.1);
+    box-shadow:  0 0 10px 3px #f4e1e1;
 }
 
 .your-service-card1{

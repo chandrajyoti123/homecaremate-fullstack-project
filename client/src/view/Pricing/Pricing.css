@@ -1,5 +1,120 @@
-.display-row{
+.pricing-section{
+    width: 100%;
+    height: auto;
+    background-color: red;
+}
+.pricing-section-child{
+    width: 100%;
+    height: auto;
+}
+.services-name{
+    width: 100%;
+    height: 60px;
+    background-color: lightcyan;
+    /* border: 1px solid black; */
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  
+}
+.services-charges{
+    width: 100%;
+    height: 200px;
+    background-color: lightpink;
+   
+   
+    
+}
+.charges-container{
+    width: 100%;
+    display: flex;
+
+}
+
+.name-of-shift{
+    width: 70%;
+font-size: 25px;
+padding-left: 30px;
+
+  
+}
+.charges-onward{
+    width: 30%;
+    font-size: 25px;
+    padding-left: 150px;
+}
+
+
+.name-of-services{
+    width: 90%;
+    height: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 20px;
+    text-transform: capitalize;
+}
+.services-icon{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.minus{
+    width: 50px;
+}
+
+.price-display-none{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+.review-container{
+    max-width: 100vw;
+    height: 420px;
+    display: flex;
+scroll-behavior: smooth;
+
+}
+.review-container1{
+    width: 10%;
+    height: 100%;
+    /* background-color: lightcoral; */
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.img{
+    width: 50px;
+}
+.left-arrow{
+    margin-right: -10px;
+}
+.review-container2{
+    width: 80%;
+    height: 100%;
+    /* background-color: lightpink; */
+    display: flex;
+    overflow-x: scroll;
+}
+.display-flex{
+    display: flex;
+  
+}
+.review-container3{
+    width: 10%;
+    height: 100%;
+    /* background-color: lightcoral; */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.right-arrow{
+    margin-left:-10px;
 }

@@ -29,9 +29,9 @@ export default function AboutUs({AbhijeetKokat}) {
 <br/>
   <h1 className='heading text-center'>Our Team</h1>
   <div className='devloper-container'>
-<AboutCard name={'Chandrajyoti Adil '} description={'I doing BE in cs branch from RTMOU, Nagpur'} hedline={'MERN Stack Devloper'} image={chandani} github={'https://github.com/chandrajyoti123/'} linkedin={'https://www.linkedin.com/in/chandrajyoti123/'}/>
+<AboutCard name={'Chandrajyoti Adil '} description={'I doing B.Tech in CSE branch from RTMNU, Nagpur'} hedline={'MERN Stack Devloper'} image={chandani} github={'https://github.com/chandrajyoti123/'} linkedin={'https://www.linkedin.com/in/chandrajyoti123/'}/>
 
-<AboutCard name={'Abhijeet kokat '} description={'I doing BE in cs branch from HSBPVTS COE, KASHTI'} hedline={'MERN Stack Devloper'} image={abhi} linkedin={'https://www.linkedin.com/in/abhijeetkokat007/'} github={'https://github.com/Abhijeetkokat007/'}/>
+<AboutCard name={'Abhijeet kokat '} description={'I doing BE in CSE branch from HSBPVTS COE, KASHTI'} hedline={'MERN Stack Devloper'} image={abhi} linkedin={'https://www.linkedin.com/in/abhijeetkokat007/'} github={'https://github.com/Abhijeetkokat007/'}/>
 </div>
 
 

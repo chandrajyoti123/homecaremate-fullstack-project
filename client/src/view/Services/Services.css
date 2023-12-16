@@ -8,8 +8,9 @@
 
 }
 
-.helper-container{
+.helpers-container{
+    max-width: 100vw;
+    height: 620px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+scroll-behavior: smooth;
 }

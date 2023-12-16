@@ -1,7 +1,8 @@
 .pricing-section{
     width: 100%;
     height: auto;
-    background-color: red;
+    
+    box-shadow:  0 0 10px 3px #f4e1e1;
 }
 .pricing-section-child{
     width: 100%;
@@ -10,15 +11,25 @@
 .services-name{
     width: 100%;
     height: 60px;
-    background-color: lightcyan;
+  background-color: #fff;
+
     /* border: 1px solid black; */
     display: flex;
   
 }
+.services-name:hover{
+    background-color: rgba(10, 106, 145,0.1);
+   
+  
+}
+.charges-color{
+    background-color: rgba(10, 106, 145,0.1) !important;
+}
 .services-charges{
     width: 100%;
-    height: 200px;
-    background-color: lightpink;
+    height: auto;
+    background-color: rgb(166, 224, 248,0.1);
+    padding: 20px 0;
    
    
     
@@ -26,13 +37,17 @@
 .charges-container{
     width: 100%;
     display: flex;
+    margin-bottom: 10px;
+    padding: 5px 0;
 
 }
+
 
 .name-of-shift{
     width: 70%;
 font-size: 25px;
 padding-left: 30px;
+color: rgba(0, 0, 0,0.5);
 
   
 }
@@ -40,6 +55,7 @@ padding-left: 30px;
     width: 30%;
     font-size: 25px;
     padding-left: 150px;
+    color: rgba(0, 0, 0,0.5);
 }
 
 
@@ -50,6 +66,7 @@ padding-left: 30px;
     font-weight: bold;
     padding-left: 20px;
     text-transform: capitalize;
+    margin-top: 10px;
 }
 .services-icon{
     width: 10%;
@@ -59,7 +76,7 @@ padding-left: 30px;
     align-items: center;
 }
 .minus{
-    width: 50px;
+    width: 25px;
 }
 
 .price-display-none{
@@ -91,10 +108,10 @@ scroll-behavior: smooth;
     align-items: center;
 }
 .img{
-    width: 50px;
+    width: 30px;
 }
 .left-arrow{
-    margin-right: -10px;
+    /* margin-right: -10px; */
 }
 .review-container2{
     width: 80%;
@@ -102,6 +119,7 @@ scroll-behavior: smooth;
     /* background-color: lightpink; */
     display: flex;
     overflow-x: scroll;
+    scroll-behavior: smooth;
 }
 .display-flex{
     display: flex;
@@ -116,5 +134,5 @@ scroll-behavior: smooth;
     align-items: center;
 }
 .right-arrow{
-    margin-left:-10px;
+    /* margin-left:-10px; */
 }

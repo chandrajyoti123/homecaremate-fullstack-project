@@ -110,13 +110,16 @@ export default function Pricing() {
   const [pricehandler5, setPricehandler5] = useState('displaynone')
   const [priceicon5, setpriceicon5] = useState(minus)
   const [istoggle5, setIstoggle5] = useState(false)
+  const [pricename,setPricename]=useState('')
   const showprice5 = () => {
     if (istoggle5 == false) {
       setPricehandler5('display-block')
       setpriceicon5(plus)
+      setPricename('charges-color')
     } else {
       setPricehandler5('displaynone')
       setpriceicon5(minus)
+      setPricename('')
     }
     setIstoggle5(istoggle5 == false ? true : false)
 
@@ -131,7 +134,7 @@ export default function Pricing() {
 
         <div className="pricing-section">
           <div className="pricing-section-child">
-            <div className="services-name">
+            <div className={`services-name  ${pricename}`}>
               <span className="name-of-services">
                 home maid
               </span>
@@ -435,7 +438,7 @@ export default function Pricing() {
       <div className="review-container">
         <div className="review-container1">
           <img src={left} className="img left-arrow" onClick={() => {
-            handleScroll({ deltaY: -300 });
+            handleScroll({ deltaY: -500 });
 
           }} />
 
@@ -459,7 +462,7 @@ export default function Pricing() {
         </div>
         <div className="review-container3">
           <img src={right} className="img right-arrow" onClick={() => {
-            handleScroll({ deltaY: 300 });
+            handleScroll({ deltaY: 500 });
 
           }} />
 

@@ -33,12 +33,15 @@ export default function Home() {
   useEffect(() => {
     loadData()
     // loaduserdatafromlocal();
-    if(!(JSON.parse(localStorage.getItem('signupuser')))){
-      window.location.href='/singup'
     
-    }
     if(!(JSON.parse(localStorage.getItem('loginuser')))){
-      window.location.href='/login'
+
+      if(!(JSON.parse(localStorage.getItem('signupuser')))){
+        window.location.href='/singup'
+        return
+      
+      } 
+           window.location.href='/login'
     }
   
 

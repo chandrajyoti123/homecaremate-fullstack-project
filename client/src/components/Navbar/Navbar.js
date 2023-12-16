@@ -77,8 +77,8 @@ export default function Navbar() {
                     <ul>
                         <li><Link to={'/'} className='nav-link'>home</Link></li>
                         <li><Link to={'/services'} className='nav-link'>services</Link></li>
-                        <li><Link to={'/pricing'} className='nav-link'>review</Link></li>
-                        <li><Link to={'/security'} className='nav-link'>security</Link></li>
+                        <li><Link to={'/pricing'} className='nav-link'>pricing</Link></li>
+                        {/* <li><Link to={'/security'} className='nav-link'>security</Link></li> */}
                         <li><Link to={'/aboutus'} className='nav-link'>about us</Link></li>
                         <li><Link to={'/jobhere'} className='nav-link'>job</Link></li>
                     </ul>

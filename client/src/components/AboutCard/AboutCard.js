@@ -6,11 +6,11 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 function AboutCard({name , hedline, description, image, github, linkedin, peerlist}) {
   return (
     <div className='job-card icon-container'>
-    <div className='img-container'>
-    <img className='img-card' src={image} />
+    <div className='img-container text-center'>
+    <img className='img-card text-center' src={image} />
     </div>
     <h2> {name} </h2>
-    <p>( {hedline} )</p> <br/>
+    <p className='hed-text'> {hedline} </p> <br/>
     <p> {description}</p>
     <p> {}</p>
 

@@ -78,7 +78,7 @@ export default function Home() {
       </div>
       
       <div className='col-light'>
-      <h2 className='img-container col-blue'> Why Use HomeCareMate </h2>
+      <h1 className=' col-blue '> Why Use HomeCareMate </h1>
       <div className='whyuse-card'>
         
         <div className='use-card'>
@@ -112,7 +112,7 @@ export default function Home() {
         </div>
         </div>
       </div>
-     <h1 className='img-container'>Working Servents</h1>
+     <h1 className='col-blue  '>Working Servents</h1>
       <div className='scroll'>
         {
           card.map((card, i) => {

@@ -78,7 +78,7 @@ export default function Home() {
       </div>
       
       <div className='col-light'>
-      <h1 className='img-container col-blue'> Why Use HomeCareMate </h1>
+      <h2 className='img-container col-blue'> Why Use HomeCareMate </h2>
       <div className='whyuse-card'>
         
         <div className='use-card'>

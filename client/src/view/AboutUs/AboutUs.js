@@ -14,7 +14,7 @@ export default function AboutUs({AbhijeetKokat}) {
           <img className='poster-img' src='https://kaamwalibais.com/assets/about-us-maid.jpg' alt='img' />
         </div>
         <div className='home-poster-text'>
-          <h1 className='heading'>Who are we?</h1>
+          <h1 className='heading-1'>Who are we?</h1>
           <h3> </h3>
           <p className='para-text font-size'>
           HomeCareMate, a division of Kaamwalibais, is your ultimate destination for comprehensive home care services , India. With a rich legacy of over news in the domestic assistance industry, HomeCareMate specializes in providing a wide array of services, including 24/7 maid services, domestic help, housemaids, cooks, caretakers, ayahs, peons, nurses, ward boys, babysitters, and elderly care.

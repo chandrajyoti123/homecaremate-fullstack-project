@@ -73,7 +73,7 @@
     width: 100%;
 }
 .input-label{
-    font-size: 25px;
+    font-size: 23px;
     color: rgb(255, 56, 6);
     font-weight: 700;
 
@@ -81,7 +81,7 @@
 }
 .input-field{
     width: 95%;
-    height: 50px;
+    height: 40px;
     font-size: 17px;
     padding-left: 10px;
     margin-bottom: 3px; 
@@ -90,8 +90,8 @@
 }
 
 .btn{
-    padding: 10px 15px;
-    font-size: 20px;
+    padding: 8px 15px;
+    font-size: 18px;
     border-radius: 5px;
     border: none;
     background-color: rgb(255, 56, 6);

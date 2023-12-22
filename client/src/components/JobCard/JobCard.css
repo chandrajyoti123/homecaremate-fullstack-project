@@ -71,3 +71,7 @@ margin: 10px auto;
     word-wrap: break-word;
     
 }
+
+@media screen and (max-width:600px){
+    
+}

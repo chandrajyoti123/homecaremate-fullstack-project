@@ -14,3 +14,16 @@
     display: flex;
 scroll-behavior: smooth;
 }
+
+@media screen and (max-width:600px){
+    .services-section{
+        max-width: 100vw;
+    
+        justify-content: center;
+        gap: 0px;
+        flex-direction: column;
+        align-items: center !important;
+       
+       
+       }
+}

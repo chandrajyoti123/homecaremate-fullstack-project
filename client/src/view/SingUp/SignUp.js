@@ -112,9 +112,9 @@ export default function SignUp() {
           </div>
           <Link to={'/login'}><button className='sign-btn'>login</button></Link>
         </div>
-        <div className=' login-heading'>Welcome to Home Care Made</div>
+        <div className=' login-heading'>Welcome to Home Care Mate</div>
       <div className='text margin-bottom'>create a new account</div>
-          <div className='main-input-container'>
+          <div className='main-input-container'> 
             <div className='input-group'>
               <label htmlFor='fistname ' className='input-label'>First Name</label>
               <input type='text' placeholder='Ex., Tara' id='fistname' className='input-field singup-inpute'

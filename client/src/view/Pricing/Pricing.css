@@ -136,3 +136,48 @@ scroll-behavior: smooth;
 .right-arrow{
     /* margin-left:-10px; */
 }
+
+@media screen and (max-width:600px){
+
+   
+    
+    
+    .name-of-shift{
+      
+    padding-left: 0px;
+
+    
+      
+    }
+    .charges-onward{
+    
+    
+        padding-left: 0px;
+      
+    }
+    .minus{
+        width: 15px;
+    }
+    .name-of-services{
+       
+        font-size: 25px;
+        
+        padding-left: 10px;
+     
+        margin-top: 5px;
+    }
+    .review-container1{
+        width: 0%;
+       
+    }
+    .review-container3{
+        width: 0%;
+        
+      
+    }
+    .review-container2{
+        width: 100%;
+       
+       
+    }
+}

@@ -123,7 +123,7 @@ export default function JobHere() {
       <div className='job-form'>
         <div className='job-form-section1'>
 
-          <div className='input-group'>
+          <div className='input-group job-input-group'>
             <label className='input-label'>First Name</label>
             <input type='text' placeholder='Tara.,' className='input-field jobfield'
               value={firstname} onChange={(e) => {
@@ -131,7 +131,7 @@ export default function JobHere() {
               }} />
           </div>
 
-          <div className='input-group'>
+          <div className='input-group job-input-group'>
             <label className='input-label'>Last Name</label>
             <input type='text' placeholder=' Ex.,Shahu' className='input-field jobfield'
               value={lastname} onChange={(e) => {
@@ -139,7 +139,7 @@ export default function JobHere() {
               }} />
           </div>
 
-          <div className='input-group'>
+          <div className='input-group job-input-group'>
             <label className='input-label'>Phone No</label>
             <input type='number' placeholder=' +91' className='input-field jobfield'
               value={phoneno} onChange={(e) => {
@@ -147,7 +147,7 @@ export default function JobHere() {
               }} />
           </div>
 
-          <div className='input-group'>
+          <div className='input-group job-input-group'>
             <label className='input-label'>Email</label>
             <input type='email' placeholder='Example@gmail.com' className='input-field jobfield'
               value={email} onChange={(e) => {
@@ -155,7 +155,7 @@ export default function JobHere() {
               }} />
           </div>
 
-          <div className='input-group'>
+          <div className='input-group job-input-group'>
             <label className='input-label'>Address</label>
             <input type='text' placeholder='Address' className='input-field jobfield'
               value={address} onChange={(e) => {
@@ -163,7 +163,7 @@ export default function JobHere() {
               }} />
           </div>
 
-          <div className='input-group'>
+          <div className='input-group job-input-group'>
             <label className='input-label'>Aadhar No</label>
             <input type='Number' placeholder='XXXX XXXX XXXX' className='input-field jobfield'
               value={adharno} onChange={(e) => {
@@ -192,7 +192,7 @@ export default function JobHere() {
 
          
           <div className='job-field-con'>
-            <div className='input-group'>
+            <div className='input-group job-input-group'>
               <label className='input-label'>Age</label>
               <input type='Number' placeholder='Ex.,20 year' className='input-field jobfield agefield'
                 value={age} onChange={(e) => {
@@ -201,7 +201,7 @@ export default function JobHere() {
             </div>
 
 
-            <div className='input-group radio-group'>
+            <div className='input-group radio-group job-input-group'>
               <label className='input-label'>Gender</label>
               <div className="job-user-gender">
                 <div className="radio-field">
@@ -236,7 +236,7 @@ export default function JobHere() {
           </div>
 
           <div className='job-field-con'>
-            <div className='input-group'>
+            <div className='input-group job-input-group'>
               <label className='input-label'>Select Category</label>
               <select value={jobcategory} onChange={(e) => {
                 setJobcategory(e.target.value)
@@ -252,12 +252,12 @@ export default function JobHere() {
               </select>
             </div>
 
-            <div className='input-group'>
+            <div className='input-group job-input-group'>
               <label className='input-label'>Shift</label>
               <select value={shift} onChange={(e) => {
                 setShift(e.target.value)
 
-              }} className="selec-field">
+               }} className="selec-field">
                 <option>select a shift
                 </option>
                 <option value={'day shift'} >day shift</option>
@@ -274,12 +274,12 @@ export default function JobHere() {
 
           </div>
 
-          <div className='input-group margin-top'>
+          <div className='input-group margin-top job-input-group'>
             <label className='input-label'>Expecting Salary</label>
             <input type='Number' placeholder='salary' className='input-field jobfield'
               value={expectingsa} onChange={(e) => {
                 setExpectingsa(e.target.value)
-              }} />
+              }}/>
           </div>
           <div className='justify-start'>
             <button type='button' className='btn btnjob' onClick={postapljobfun}>Submit</button>

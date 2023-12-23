@@ -45,7 +45,7 @@
 
 .name-of-shift{
     width: 70%;
-font-size: 25px;
+font-size: 20px;
 padding-left: 30px;
 color: rgba(0, 0, 0,0.5);
 
@@ -53,7 +53,7 @@ color: rgba(0, 0, 0,0.5);
 }
 .charges-onward{
     width: 30%;
-    font-size: 25px;
+    font-size: 20px;
     padding-left: 150px;
     color: rgba(0, 0, 0,0.5);
 }
@@ -62,11 +62,12 @@ color: rgba(0, 0, 0,0.5);
 .name-of-services{
     width: 90%;
     height: 100%;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     padding-left: 20px;
     text-transform: capitalize;
     margin-top: 10px;
+    color: rgb(86, 86, 86);
 }
 .services-icon{
     width: 10%;

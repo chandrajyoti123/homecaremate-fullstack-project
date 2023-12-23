@@ -7,11 +7,12 @@
     margin-top: 3px 0px;
     padding-top: 15px;
     background-color: #fff;
+    padding: 20px;
 }
 .service-caption{
     text-align: justify;
     font-size: 20px;
-    color: black;
+    color: rgb(104, 103, 103);
     margin-top: 20px;
    
 }
@@ -26,8 +27,8 @@
 
 }
 .service-img{
-    width: 200px;
-    height: 220px;
+    width: 180px;
+    height: 200px;
     display: block;
     margin: 10px auto;
  

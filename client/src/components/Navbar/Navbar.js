@@ -74,13 +74,13 @@ export default function Navbar() {
                   <img src={logo} className='logo'/>
                 </div>
                 <div className='list-section'>
-                    <ul>
-                        <li><Link to={'/'} className='nav-link'>home</Link></li>
-                        <li><Link to={'/services'} className='nav-link'>services</Link></li>
-                        <li><Link to={'/pricing'} className='nav-link'>pricing</Link></li>
+                    <ul className='display-flex'>
+                        <li><Link to={'/'} className='nav-link'>Home</Link></li>
+                        <li><Link to={'/services'} className='nav-link'>Services</Link></li>
+                        <li><Link to={'/pricing'} className='nav-link'>Pricing</Link></li>
                         {/* <li><Link to={'/security'} className='nav-link'>security</Link></li> */}
-                        <li><Link to={'/aboutus'} className='nav-link'>about us</Link></li>
-                        <li><Link to={'/jobhere'} className='nav-link'>job</Link></li>
+                        <li><Link to={'/aboutus'} className='nav-link'>About us</Link></li>
+                        <li><Link to={'/jobhere'} className='nav-link'>Job</Link></li>
                     </ul>
 
                 </div>
